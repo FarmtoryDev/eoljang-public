@@ -4,7 +4,7 @@ function farmerList(){
 
     $.ajax({
         type: "POST",
-        url: "./order/query",
+        url: "https://api.eoljang.com/order/query",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
             xhr.setRequestHeader("X-Eoljang-Token" , Accesstoken);

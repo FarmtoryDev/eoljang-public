@@ -6,7 +6,7 @@ function farmer_detail(){
 
     $.ajax({
         type: "GET",
-        url: "./farmer/detail/"+sixarray_list[0],
+        url: "https://api.eoljang.com/farmer/detail/"+sixarray_list[0],
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
         },

@@ -161,7 +161,7 @@ function productDetail(DeviceId, productId){
     // 상품 정보 가져오기
     $.ajax({
         type: "GET",
-        url: "./product/detail/" + productId,
+        url: "https://api.eoljang.com/product/detail/" + productId,
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
         },
@@ -185,7 +185,7 @@ function basketUpdate(DeviceId, Accesstoken, productId, count){
     // 장바구니 업데이트하기
     $.ajax({
         type: "POST",
-        url: "./basket/update",
+        url: "https://api.eoljang.com/basket/update",
         cache:false,
         data: JSON.stringify({ "product_id": productId, "count": count}),
         beforeSend: function (xhr) {

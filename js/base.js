@@ -95,7 +95,7 @@ function setBasketBadge() {
     if (DeviceId != null && Accesstoken != null) {
         $.ajax({
             type: "POST",
-            url: "./basket/list",
+            url: "https://api.eoljang.com/basket/list",
             cache: false,
             beforeSend: function (xhr) {
                 xhr.setRequestHeader("X-Device-Id", DeviceId);

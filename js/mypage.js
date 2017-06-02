@@ -219,7 +219,7 @@ function loadOrder(DeviceId, Accesstoken, orderType){
     // 장바구니 업데이트하기
     $.ajax({
         type: "POST",
-        url: "./order/query",
+        url: "https://api.eoljang.com/order/query",
         cache:false,
         data: "type=" + orderType,
         beforeSend: function (xhr) {
