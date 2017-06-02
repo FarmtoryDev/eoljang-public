@@ -1,0 +1,29 @@
+#fullcontainer {
+    margin: 72px auto;
+    text-align: center;
+    max-width: 1200px;
+}
+
+#container-login {
+    width: 400px;
+    height: 400px;
+    opacity: 0.9;
+    border: solid 1px #e8e8e8;
+}
+
+#login-logo {
+  margin-top: 60px;
+  width: 135px;
+  height: 105px;
+  object-fit: contain;
+}
+
+#naver-login {
+  margin-top: 57px;
+  width: 226px;
+  height: 49px;
+}
+
+#naver_id_login {
+    margin: 70px auto;
+}

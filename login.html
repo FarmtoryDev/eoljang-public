@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 직접만든 css -->
+    <link href="./css/base.css" type="text/css" rel="stylesheet" />
+    <link href="./css/login.css" type="text/css" rel="stylesheet" />
+    <!-- 네이버 로그인버튼 만들기 -->
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.2.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- 헤더 및 푸터를 불러오는 js -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+
+    <title>모이다 얼장</title>
+</head>
+<body>
+<div id="load-header">
+</div>
+
+<div id="fullcontainer">
+
+    <!-- 네이버아이디로로그인 버튼 노출 영역 -->
+    <div id="container-login" class="center">
+        <img id="login-logo" src="img/login/login_logo.png" />
+        <br>
+        <div id="naver_id_login" class="center">
+        </div>
+    </div>
+</div>
+
+  <!-- //네이버아이디로로그인 버튼 노출 영역 -->
+  <script type="text/javascript">
+  	var naver_id_login = new naver_id_login('PFOYjPfZUwd6iFGaDxQ3', 'https://www.eoljang.com/callback.html');
+    console.log("naver_id_login",naver_id_login);
+
+
+    var state = naver_id_login.getUniqState();
+      	naver_id_login.setButton("green", 3, 50);
+      	naver_id_login.setDomain("https://www.eoljang.com/login.html");
+      	naver_id_login.setState(state);
+      	naver_id_login.setPopup();
+      	naver_id_login.init_naver_id_login();
+  </script>
+    
+<div id="load-footer">
+</div>
+</body>
+</html>

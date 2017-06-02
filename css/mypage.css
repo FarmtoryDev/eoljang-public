@@ -1,0 +1,304 @@
+#order-title {
+  font-family: NotoSansCJKkr;
+  font-size: 30rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: #000000;
+  margin-top: 3.9%;
+  text-decoration: underline;
+}
+
+#tab-container {
+  width: 83.3%;
+  margin: 0 auto;
+}
+
+#preorder-tab, #delivery-tab {
+  width: 240px;
+  height: 60px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-top: solid 1px #979797;
+  border-left: solid 1px #979797;
+  border-right: solid 1px #979797;
+}
+
+.selected-tab {
+  background-color: #ffffff;
+  border-bottom: solid 1px #ffffff;
+}
+
+.unselected-tab {
+  background-color: #d8d8d8;;
+  border-bottom: solid 1px #979797;
+}
+
+#preorder-text, #delivery-text {
+  font-family: NotoSansCJKkr;
+  font-size: 24rem;
+  letter-spacing: -1.2px;
+  text-align: center;
+  color: #000000;
+}
+
+#order-container {
+  position: relative;
+  width: 83.3%;
+  margin: 0 auto;
+  border: solid 1px #979797;
+}
+
+#order-table-title {
+}
+
+.table-title {
+  height: 24px;
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 14rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.7px;
+  text-align: left;
+  color: #000000;
+  border-left: solid 1px #e8e8e8;
+  border-right: solid 1px #e8e8e8;
+}
+
+.table-farm {
+  position: relative;
+  border-top: solid 2px #e8e8e8;
+  width: 86%;
+  margin-left: 13%;
+}
+
+.table-product {
+  padding: 25px 0 20px 0;
+}
+
+#order-table-title, #order-table-product {
+  vertical-align: middle;
+}
+
+#order-table-data {
+  width: 13%;
+  display: inline-block;
+  padding-left: 2.6%;
+}
+
+#order-table-farmer {
+  width: 12.6%;
+  display: inline-block;
+}
+
+#order-table-info {
+  width: 29.3%;
+  display: inline-block;
+}
+
+#order-table-price {
+  width: 11.4%;
+  display: inline-block;
+}
+
+#order-table-count {
+  width: 7.2%;
+  display: inline-block;
+}
+
+#order-table-allprice {
+  width: 11.4%;
+  display: inline-block;
+}
+
+#order-table-status {
+  width: 13%;
+  display: inline-block;
+  padding-right: 4.1%;
+}
+
+.product-cell-farmer {
+  width: 14.49%;
+  display: inline-block;
+}
+
+.product-cell-info {
+  width: 33.69%;
+  display: inline-block;
+}
+
+.product-cell-price {
+  width: 13.15%;
+  display: inline-block;
+}
+
+.product-cell-count {
+  width: 8.35%;
+  display: inline-block;
+}
+
+.product-cell-allprice {
+  width: 13.15%;
+  display: inline-block;
+}
+
+.product-cell-status {
+  width: 15%;
+  display: inline-block;
+  padding-right: 4.73%;
+}
+
+.product-cell-farmer {
+  font-family: NotoSansCJKkr-Demi;
+  font-size: 18rem;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  text-align: left;
+  color: #000000;
+}
+
+.product-farm, .product-farmer-name {
+  text-decoration: underline;
+}
+
+.product-img {
+  margin-left: 4.58%;
+  width: 21.56%;
+  display: inline-block;
+}
+
+.product-info {
+  width: 68%;
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: left;
+  color: #000000;
+  display: inline-block;
+}
+
+.product-price {
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: right;
+  color: #000000;
+}
+
+.product-count {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #000000;
+  margin: 0 5px;
+}
+
+.product-allprice {
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: right;
+  color: #000000;
+}
+
+.product-status {
+  font-family: NotoSansCJKkr;
+  font-size: 18rem;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #000000;
+}
+
+.btn-receive {
+  display: table-cell;
+  width: 8.3%;
+  height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  border: solid 1px #000000;
+}
+
+.text-receive {
+  font-family: NotoSansCJKkr;
+  font-size: 18rem;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #000000;
+}
+
+.price-container {
+  width: 100%;
+  height: 80px;
+  background-color: #4a4a4a;
+  vertical-align: middle;
+}
+
+.price-title, .shipping-title {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  letter-spacing: -1px;
+  color: #ffffff;
+}
+
+.price-contents, .shipping-contents {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: #ffffff;
+}
+
+.ic-add-white, .ic-equal {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.allprice-title {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.allprice-contents {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: -1.2px;
+  color: #d0021b;
+}

@@ -1,0 +1,22 @@
+#fullcontainer {
+    margin: 72px auto;
+    text-align: center;
+}
+
+#event_title {
+    font-family: NotoSansCJKkr;
+    font-size: 30rem;
+    letter-spacing: -1.5px;
+    text-align: center;
+    color: #000000;
+    text-decoration: underline;
+}
+
+#event_subtitle {
+    font-family: NotoSansCJKkr;
+    font-size: 18rem;
+    letter-spacing: -0.9px;
+    text-align: center;
+    color: #000000;
+    margin: 24px auto;
+}

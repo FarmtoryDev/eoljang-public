@@ -1,0 +1,638 @@
+#order-title {
+  font-family: NotoSansCJKkr;
+  font-size: 30rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: #000000;
+  margin-top: 3.9%;
+  text-decoration: underline;
+  display: block;
+}
+
+#checkdelete-container {
+  position: relative;
+  width: 83.3%;
+  height: 48px;
+  margin: 0 auto 10px auto;
+}
+
+#btn-checkdelete {
+  position: absolute;
+  right: 0;
+  width: 160px;
+  height: 48px;
+  background-color: #4a4a4a;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#text-checkdelete {
+  font-family: NotoSansCJKkr;
+  font-size: 18rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #ffffff;
+}
+
+#order-container {
+  position: relative;
+  width: 83.3%;
+  margin: 0 auto;
+  border-top: solid 2px #9b9b9b;
+  border-bottom: solid 2px #9b9b9b;
+}
+
+#order-table-title {
+  background-color: #f5f5f5;
+}
+
+.table-title {
+  height: 24px;
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 14rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.7px;
+  text-align: left;
+  color: #000000;
+}
+
+.table-left-line {
+  border-left: solid 1px #e8e8e8;
+}
+
+.table-farm {
+  position: relative;
+  border-top: solid 2px #e8e8e8;
+}
+
+.table-product {
+  padding: 25px 0 20px 0;
+}
+
+#order-table-title, #order-table-product {
+  vertical-align: middle;
+}
+
+#order-table-farmer, .product-cell-farmer {
+  width: 9.2%;
+  display: inline-block;
+  padding-left: 1.5%;
+}
+
+#order-table-info, .product-cell-info {
+  width: 37.3%;
+  display: inline-block;
+}
+
+#order-table-price, .product-cell-price {
+  width: 12%;
+  display: inline-block;
+}
+
+#order-table-count, .product-cell-count {
+  width: 15.3%;
+  display: inline-block;
+}
+
+#order-table-allprice, .product-cell-allprice {
+  width: 10.8%;
+  display: inline-block;
+}
+
+#order-table-shipping {
+  width: 11.5%;
+  display: inline-block;
+  padding-right: 1.5%;
+}
+
+.product-cell-farmer {
+  font-family: NotoSansCJKkr-Demi;
+  font-size: 18rem;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  text-align: left;
+  color: #000000;
+}
+
+.product-farm, .product-farmer-name {
+  text-decoration: underline;
+}
+
+.product-img {
+  margin-left: 4.58%;
+  width: 21.56%;
+  display: inline-block;
+}
+
+.product-info {
+  width: 68%;
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: left;
+  color: #000000;
+  display: inline-block;
+}
+
+.product-price {
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: right;
+  color: #000000;
+}
+
+.btn-minus, .btn-plus {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.product-count {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #000000;
+  margin: 0 15px;
+}
+
+.product-allprice {
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: right;
+  color: #000000;
+}
+
+.product-shipping {
+  position: absolute;
+  top: 47.5%;
+  right: 1.5%;
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-align: right;
+  color: #4fb9ab;
+}
+
+#price-container {
+  width: 100%;
+  vertical-align: top;
+  margin: 2.3% 0 2.9% 0;
+  background-color: #f5f5f5;
+}
+
+#price-left {
+  display: inline-block;
+  width: 72.4%;
+  height: 100%;
+  padding-left: 8.3%;
+  background-color: #4a4a4a;
+  vertical-align: top;
+}
+
+#pricebox-allprice {
+  display: inline-block;
+  width: 30%;
+}
+
+#pricebox-ordertype {
+  display: inline-block;
+  width: 60%;
+}
+
+#pricebox-shipping {
+  display: inline-block;
+  width: 30%;
+}
+
+#radiobtn-box {
+  display: inline-block;
+  width: 40%;
+}
+
+#price-right {
+  display: inline-block;
+  width: 27.1%;
+  height: 100%;
+  padding-right: 8.3%;
+  background-color: #f5f5f5;
+  vertical-align: top;
+}
+
+#price-title {
+  display: inline-block;
+  width: 50%;
+  font-family: NotoSansCJKkr;
+  font-size: 18rem;
+  letter-spacing: -0.9px;
+  text-align: left;
+  color: #ffffff;
+}
+
+#price-contents {
+  display: inline-block;
+  width: 45%;
+  font-family: NotoSansCJKkr;
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: -1.2px;
+  text-align: right;
+  color: #ffffff;
+}
+
+#ic-add-white, #ic-equal {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+#pricebox-shipping {
+  display: inline-block;
+  width: 23.4%;
+}
+
+#text-box-shipping {
+  border-bottom: solid 3px #9b9b9b;;
+}
+
+#delivery-shipping-title, #preorder-shipping-title {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 18rem;
+  letter-spacing: -0.9px;
+  text-align: left;
+  color: #ffffff;
+}
+
+#delivery-shipping-contents {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: -1.2px;
+  color: #4fb9ab;
+}
+
+#preorder-shipping-contents {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: -1.2px;
+  color: #ffffff;
+}
+
+#radiobtn-box input {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+#delivery-order, #preorder-order {
+  display: inline-block;
+  font-family: NotoSansCJKkr;
+  font-size: 18rem;
+  font-weight: bold;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #ffffff;
+}
+
+#allpricebox {
+  display: inline-block;
+  width: 50%;
+}
+
+#allprice-title {
+  font-family: NotoSansCJKkr;
+  font-size: 18rem;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #000000;
+}
+
+#allprice-contents {
+  font-family: NotoSansCJKkr;
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: -1.2px;
+  text-align: right;
+  color: #d0021b;
+}
+
+#bottombtn-container {
+  width: 83.4%;
+  height: 48px;
+  margin: 0 auto;
+}
+
+#btn-back {
+  display: table-cell;
+  width: 240px;
+  height: 48px;
+  border: solid 1px #9b9b9b;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#text-back {
+  font-family: NotoSansCJKkr;
+  font-size: 18rem;
+  font-weight: bold;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #9b9b9b;
+}
+
+#btn-confirm {
+  display: table-cell;
+  width: 240px;
+  height: 48px;
+  background-color: #fcf083;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#text-confirm {
+  font-family: NotoSansCJKkr;
+  font-size: 18rem;
+  font-weight: bold;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #000000;
+}
+
+/* 모바일에서는 보이지 않는 부분들 */
+
+.product-farmer-mobile, .product-shipping-title, .product-allprice-title,
+#delivery-shipping-title, #preorder-shipping-title {
+  display: none;
+}
+
+@media screen and (max-device-width: 767px) {
+  #order-title, #order-table-title, .product-cell-farmer, #btn-back {
+    display: none;
+  }
+
+  #fullcontainer div {
+    font-size: 24rem;
+  }
+
+  #order-container {
+    width: 100%;
+  }
+
+  #order-table-product {
+    width: 100%;
+  }
+
+  #table-farm {
+    width: 100%;
+  }
+
+  .product-farm-title {
+    width: 100%;
+    padding: 2.2px 4.5%;
+    background-color: #f5f5f5;
+    height: 30px;
+  }
+
+  .product-farmer-mobile {
+    display: inline-block;
+    font-family: NotoSansCJKkr-Demi;
+    font-weight: 300;
+    color: #000000;
+    width: 60%;
+    position: absolute;
+    top: 1%;
+  }
+
+  .product-farmer-name-mobile {
+    text-decoration: underline;
+  }
+
+  .product-cell-shipping {
+    display: inline-block;
+  }
+
+  .product-shipping-title {
+    display: inline-block;
+    position: absolute;
+    top: 1%;
+    right: 24.9%;
+    color: #9b9b9b;
+  }
+
+  .product-shipping {
+    display: inline-block;
+    font-family: NotoSansCJKkr;
+    text-align: right;
+    color: #9b9b9b;
+    top: 1%;
+    right: 4.5%;
+    color: #4fb9ab;
+    font-weight: bold;
+  }
+
+  .table-product {
+    width: 100%;
+    padding: 2.2% 4.5%;
+    position: relative;
+    border-bottom: solid 1px #9b9b9b;
+  }
+
+  .product-cell-info {
+    width: 100%;
+  }
+
+  .product-cell-price {
+    display: block;
+    position: absolute;
+    width: auto;
+    margin-left: 31%;
+    bottom: 40%;
+  }
+
+  .product-price {
+    text-align: left;
+    color: #9b9b9b;
+  }
+
+  .product-cell-count {
+    display: block;
+    position: absolute;
+    width: auto;
+    right: 7%;
+    bottom: 40%;
+  }
+
+  .product-info {
+    vertical-align: top;
+    margin-left: 4.4%;
+    width: 63%;
+    font-size: 26rem;
+    padding-bottom: 13%;
+    border-bottom: solid 2px #9b9b9b;
+  }
+
+  .product-cell-allprice {
+    display: block;
+    width: auto;
+    margin: 10px 10px;
+    position: relative;
+  }
+
+  .product-allprice-title {
+    display: inline-block;
+    margin-left: 65%;
+    color: #9b9b9b;
+  }
+
+  .product-allprice {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #price-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  #price-left {
+    width: 100%;
+    padding: 0 4.5%;
+  }
+
+  #pricebox-allprice {
+    width: 100%;
+    display: block;
+    border-bottom: solid 2px #9b9b9b;
+    padding: 20px 0;
+  }
+
+  #price-title {
+    display: inline-block;
+    width: auto;
+    left: 0;
+  }
+
+  #pricebox-ordertype {
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+  }
+
+  #ic-add-white {
+    width: 5.6%;
+    height: auto;
+    position: relative;
+    top: -30px;
+  }
+
+  #pricebox-shipping {
+    position: absolute;
+    right: 0;
+    text-align: right;
+  }
+
+  #text-box-shipping {
+    border-bottom: none;
+    margin-bottom: 10px;
+  }
+
+  #radiobtn-box {
+    position: relative;
+    width: 60%;
+    padding-left: 5%;
+  }
+
+  #radiobtn-box input {
+    width: 16px;
+    height: auto;
+  }
+
+  #text-box-radiobtn-delivery {
+    margin-bottom: 10px;
+  }
+
+  #price-contents {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 4.5%;
+  }
+
+  #price-right {
+    width: 100%;
+    padding: 20px 4.5%;
+    position: relative;
+  }
+
+  #ic-equal {
+    position: relative;
+    left: 0;
+    width: 5.6%;
+    height: auto;
+  }
+
+  #allpricebox {
+    width: 93.5%;
+  }
+
+  #allprice-title {
+    position: absolute;
+    left: 20%;
+    font-weight: bold;
+  }
+
+  #allprice-contents {
+    right: 0;
+  }
+
+  #bottombtn-container {
+    width: 100%;
+  }
+
+  #btn-confirm {
+    width: 100%;
+    display: block;
+  }
+
+}

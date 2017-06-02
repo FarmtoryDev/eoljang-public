@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 직접만든 css -->
+    <link href="./css/base.css" type="text/css" rel="stylesheet" />
+    <link href="./css/productdetail.css" type="text/css" rel="stylesheet" />
+    <!-- 헤더 및 푸터를 불러오는 js -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+    <script src="js/productdetail.js" type="text/javascript"></script>
+
+    <title>모이다 얼장</title>
+</head>
+<body>
+<div id="load-header">
+</div>
+
+<div id="fullcontainer">
+    <div id="container-first">
+        <span id="container-img-container">
+            <img id="product-img" src="img/base/ic_launcher.png">
+        </span>
+        <div id="container-info">
+            <div id="product-farmer-container">
+                <span id="product-farmer">농부</span>
+                <span id="product-farmer-end">님의</span>
+            </div>
+            <div id="product-name">상품명</div>
+            <div id="product-amount">0g</div>
+            <div class="line product-line"></div>
+            <div class="info-container" id="product-price-container">
+                <div class="info-title" id="product-price-title">판매가격</div>
+                <div class="info-content" id="product-price">0원</div>
+            </div>
+            <div class="info-container" id="product-country-container">
+                <div class="info-title" id="product-country-title">생산지</div>
+                <div class="info-content" id="product-country">생산지</div>
+            </div>
+            <div class="info-container" id="product-producer-container">
+                <div class="info-title" id="product-producer-title">생산자</div>
+                <div class="info-content" id="product-producer">생산자</div>
+            </div>
+            <div class="info-container" id="product-type-container">
+                <div class="info-title" id="product-type-title">재배기준</div>
+                <div class="info-content" id="product-type">재배기준</div>
+            </div>
+            <div class="info-container" id="product-standard-container">
+                <div class="info-title" id="product-standard-title">규격</div>
+                <div class="info-content" id="product-standard">0개입</div>
+            </div>
+            <div class="line product-line"></div>
+            <div class="info-container" id="product-select-container">
+                <div class="info-title" id="product-select-title">수량선택</div>
+                <img id="btn-minus" class="clickable" src="img/productdetail/btn_minus.png" onclick="onClick(this.id)">
+                <input id="product-select" type="number" min="1" max="99" value="1" onchange="onChange(this.id)" required/>
+                <img id="btn-plus" class="clickable" src="img/productdetail/btn_plus.png" onclick="onClick(this.id)">
+            </div>
+            <div class="info-container" id="product-allprice-container">
+                <div class="info-title" id="product-allprice-title">합계금액</div>
+                <div id="product-allprice">0원</div>
+            </div>
+            <div id="btn-container">
+                <div id="btn-basket" class="clickable" onclick="onClick(this.id)"><div id="text-basket">장바구니 담기</div></div>
+                <div id="btn-margin"></div>
+                <div id="btn-order" class="clickable" onclick="onClick(this.id)"><div id="text-order">주문하기</div></div>
+            </div>
+        </div>
+    </div>
+    <div class="line container-first-line"></div>
+    <div id="load-detail">
+    <!-- 이하 jquery load를 이용해 동적으로 페이지 import -->
+    </div>
+</div>
+
+<div id="load-footer">
+</div>
+</body>
+</html>

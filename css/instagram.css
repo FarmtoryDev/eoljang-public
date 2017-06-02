@@ -1,0 +1,33 @@
+#instagram-title {
+    margin-top: 72px;
+    font-family: NotoSansCJKkr;
+    font-size: 30rem;
+    letter-spacing: -1.5px;
+    text-align: center;
+    color: #000000;
+    text-decoration: underline;
+}
+
+#instagram-subtitle {
+    margin: 24px auto;
+    font-family: NotoSansCJKkr;
+    font-size: 18rem;
+    letter-spacing: -0.9px;
+    width: 83.6%;
+    text-align: center;
+    color: #000000;
+}
+
+#instagram-section {
+    padding: 0px 0;
+    margin: 0 16.4%;
+    text-align: center;
+}
+
+.instagram-img {
+    display: inline-block;
+    width: 22.2%;
+    min-width: 320px;
+    height: auto;
+    margin: 1px;
+}

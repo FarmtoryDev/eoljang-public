@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 직접만든 css -->
+    <link href="./css/base.css" type="text/css" rel="stylesheet" />
+    <link href="./css/introduce.css" type="text/css" rel="stylesheet" />
+    <!-- 헤더 및 푸터를 불러오는 js -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+    <script src="js/introduce.js" type="text/javascript"></script>
+    <!-- Google Maps API -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOJM-BOdeJoeXvKF-3H319wN8t5xzxabA&callback=initMap">
+    </script>
+    <title>얼장소개</title>
+</head>
+<body>
+<div id="load-header">
+</div>
+
+<div class="row" id="fullcontainer">
+
+<div id="banner-img-container">
+    <img id="banner-img1" src="https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-857537721091/eoljang-asset/service_intro/Serviceintro_mainbanner.jpg" width="100%" height="auto">
+    <div id="banner-img-container2">
+        <img id="banner-img2" src="https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-857537721091/eoljang-asset/service_intro/Serviceintro_mainbanner_logo.png" width="100%" height="auto">
+    </div>
+    <div id="banner-in-text">
+        농부와 함께하는 도심 속 만남
+    </div>
+</div>
+<div id="serviceintro-container-first">
+
+    <div id="serviceintro-img-container-first">
+        <img id="serviceintro-img1" src="https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-857537721091/eoljang-asset/service_intro/ddpfarmersmarket%403x.png" width="100%" height="auto">
+    </div>
+
+    <div id="serviceintro-text-container-first">
+        <div class="line2"> </div>
+        <div class="detail-title" id="serviceintro-text-container-first-title">
+            먹거리는<br>
+            키우고 만든 사람의 얼굴이<br>
+            믿음이고 신뢰입니다
+
+        </div>
+
+        <div class="detail-context" id="serviceintro-text-container-first-context">
+            안전한 먹거리를 찾기 힘든 요즘, 정직한 생산자를 직접 만나서 구매할 수 있으면 얼마나 좋을까요? 도심 한복판 DDP에 친환경 먹거리를 생산하는 농부들이 나타났습니다. 바른 먹거리와 식문화로 도시민들과 농부들이 소통하며 맛이 있는 만남을 합니다 !
+        </div>
+    </div>
+</div>
+
+<div id="serviceintro-container-second">
+
+    <div id="serviceintro-img-container-first">
+        <img id="serviceintro-img1" src="https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-857537721091/eoljang-asset/service_intro/moida-eoljang%403x.png" width="100%" height="auto">
+    </div>
+
+    <div id="serviceintro-text-container-first">
+        <div class="line2"> </div>
+        <div class="detail-title" id="serviceintro-text-container-first-title">
+            모이다얼장은<br>
+            어디서나 만날 수 있는<br>
+            모바일 농부 시장 입니다
+
+        </div>
+
+        <div class="detail-context" id="serviceintro-text-container-first-context">
+            파머스마켓은 한정된 시간, 한정된 공간에서만 농부들을 만날 수 있었지만 모바일에 장터를 열어 언제 어디서나 농부들을 만나고 소통할 수 있습니다. 모이다 얼장은 모바일을 통해서 어떤 농부들이 어떤 먹거리를 가지고 파머스마켓에 나오는 지 정보를 제 공합니다.
+        </div>
+    </div>
+</div>
+
+<div id="serviceintro-container-icon">
+    <div id="serviceintro-container-icon-detail">
+        <div id="serviceintro-container-icon-detail-first">
+            <div id="serviceintro-container-icon-detail-first-in">
+                <img class="icon-detail-size" id="icon-detail" src="https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-857537721091/eoljang-asset/service_intro/icon-02%403x.png" width="100%" height="auto">
+            </div>
+        </div>
+
+        <div class="icon-detail-context1" id="serviceintro-container-icon-detai1-second">
+            미리보는 장터
+
+        </div>
+
+        <div class="icon-detail-context2" id="serviceintro-container-icon-detail-third">
+            모이다 얼장에서 장터에 대한 정보를 미리 볼 수 있습니다. 이번 장터에 참가하는 농부들의 정보와 판매하는 상품들을 미리 확인하여 장터 이용에 불편함이 없게 합니다.
+        </div>
+    </div>
+
+
+    <div id="serviceintro-container-icon-detail">
+        <div id="serviceintro-container-icon-detail-first">
+            <div id="serviceintro-container-icon-detail-first-in">
+                <img class="icon-detail-size" id="icon-detail" src="https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-857537721091/eoljang-asset/service_intro/icon-03%403x.png" width="100%" height="auto">
+            </div>
+        </div>
+
+        <div class="icon-detail-context1" id="serviceintro-container-icon-detai1-second">
+            프리오더로 현장수령
+
+        </div>
+
+        <div class="icon-detail-context2" id="serviceintro-container-icon-detail-third">
+            장터가 열리기 전에도 상품을 미리 주문할 수 있습니다. 프리오더 주문으로 미리 구매하고 장터에서 수령하면 더 신선하고 저렴하게 상품을 구입하실 수 있습니다.
+        </div>
+    </div>
+
+
+    <div id="serviceintro-container-icon-detail">
+        <div id="serviceintro-container-icon-detail-first">
+            <div id="serviceintro-container-icon-detail-first-in">
+                <img class="icon-detail-size" id="icon-detail" src="https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-857537721091/eoljang-asset/service_intro/icon-04%403x.png" width="100%" height="auto">
+            </div>
+        </div>
+
+        <div class="icon-detail-context1" id="serviceintro-container-icon-detai1-second">
+            새로운 식문화, 농스타그램
+
+        </div>
+
+        <div class="icon-detail-context2" id="serviceintro-container-icon-detail-third">
+            새로운 식문화를 만드는 농부들과 청년들의 이야기가 있는 농스타그램. 내가 먹는 먹거리가 어떻 게 만들어지는 지, 어떤 사람들이 바른 먹거리를 위해 정성을 쏟고 있는지 확인하고 응원해주세요!
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="contactus-detail-context1" id="serviceintro-container-contactus">
+    CONTACT US
+
+</div>
+
+
+<div id="googlemaps">
+    <!-- 구글 지도 입력 -->
+</div>
+
+<div id="contactus-info">
+    <div class="contactus-detail-context2">
+        주소 : 서울특별시 서대문구 충정로 70 웨스트게이트타워 9층 NH 핀테크혁신센터 내 팜토리<br><br>
+
+        <b>찾아오시는 방법 ㅣ </b>지하철 5호선 서대문역 8번 출구 도보 1분<br>
+        <b>전화 ㅣ </b>02-393-6489, 010-3955-9377<br>
+        <b>이메일 ㅣ </b>help@treeing.co.kr
+    </div>
+</div>
+
+</div>
+
+<div id="load-footer">
+</div>
+</body>
+</html>

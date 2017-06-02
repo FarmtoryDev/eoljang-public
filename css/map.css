@@ -1,0 +1,422 @@
+
+#fullcontainer {
+    background-color: #ffe455;
+}
+
+#map-header {
+    display: none;
+}
+
+#eoljang-body {
+    position: relative;
+    height: 5309px;
+    max-width: 1440px;
+    background-color: #ffffff;
+    padding: 0px 0;
+    margin: auto;
+}
+
+#eoljang-map {
+    position: absolute;
+    display: block;
+    top: 0%;
+    left: 0%;
+    max-width: 1440px;
+    padding: 0px 0;
+    margin: auto;
+}
+
+#map-text-box {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    top: 9.5%;
+    position: absolute;
+}
+
+#map-text-head {
+    font-family: NotoSansCJKkr;
+    font-size: 20rem;
+    font-weight: 500;
+    line-height: 0.97;
+    text-align: center;
+    color: #1f683e;
+}
+
+#map-text-foot {
+    font-family: NotoSansCJKkr;
+    font-size: 18rem;
+    line-height: 1.14;
+    text-align: center;
+    color: #1f683e;
+}
+
+#road-bg {
+    position: absolute;
+    top: 10.66%;
+    left: 26.32%;
+    width: 47.36%;
+    height: 84.78%;
+    max-width: 682px;
+    background-color: #ffffff;
+}
+
+#eoljang-road {
+    position: absolute;
+    top: 0%;
+    left: 42.97%;
+    width: 14.6%;
+    height: 100%;
+    max-width: 95.9px;
+    background-color: #ffffee;
+}
+
+.eoljang-shop {
+    /* max-height: 230px */
+    position: absolute;
+    width: 25.94%;
+    height: 5.11%;
+    max-width: 176.9px;
+}
+
+.shop-left {
+    top: 2.5%;
+    left: 11.44%;
+}
+
+.shop-right {
+    top: 2.5%;
+    right: 11.44%;
+}
+
+.shop-icon {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+.shop-num {
+    position: absolute;
+    top: 0%;
+    left: 75%;
+    width: 20%;
+    font-family: NotoSansCJKkr;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.11;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #4fb9ab;
+}
+
+.shop-name {
+    position: absolute;
+    top: 72.17%;
+    left: 0%;
+    width: 100%;
+    font-family: NotoSansCJKkr;
+    font-size: 26px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.23;
+    letter-spacing: 0.6px;
+    text-align: center;
+    color: #000000;
+}
+
+/* popup 창 z-index를 header footer(z-index: 2)보다 위로 */
+
+.cd-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+.cd-popup.is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.cd-popup-container {
+    position: relative;
+    background-color: #ffffff;
+    width: 389px;
+    height: 605px;
+    margin: 5% auto;
+    background: #FFF;
+    border-radius: .25em .25em .4em .4em;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+    transform: translateY(-40px);
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.cd-popup-close {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 17px;
+    left: 17px;
+}
+
+.is-visible .cd-popup-container {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+#btn-close {
+    width: 100%;
+    height: auto;
+}
+
+#farmer-focus {
+    position: absolute;
+    width: 147px;
+    height: 46px;
+    top: 43px;
+    left: 121px;
+    z-index: 1;
+}
+
+#farmer-img {
+    position: absolute;
+    width: 220.4px;
+    height: 220.4px;
+    top: 68.1px;
+    left: 84.3px;
+    border-radius: 100%;
+}
+
+.farmer-info {
+    position: absolute;
+    height: 17.3%;
+    width: 100%;
+    top: 306.3px;
+    text-align: center;
+}
+
+.table-country {
+    background-color: #4fb9ab;
+    width: auto;
+    height: auto;
+    padding: 4px 6px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#farm-country {
+    font-family: NotoSansCJKkr;
+    font-size: 14rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.5px;;
+    color: #ffffff;
+}
+
+.farmer-name-container {
+    margin-bottom: 60px;
+    font-family: NotoSansCJKkr;
+    font-size: 30rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: -1.5px;
+    color: #000000;
+}
+
+#farm-name {
+    margin-top: 4px;
+    font-family: NotoSansCJKkr;
+    font-size: 30rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: -1.5px;
+    color: #000000;
+}
+
+#farmer-name {
+    text-decoration: underline;
+}
+
+.farmer-product-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.farmer-product-box {
+    position: absolute;
+    bottom: 0;
+    width: 194.5px;
+    height: 185.8px;
+}
+
+.farmer-product-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.farmer-product-box-left {
+    left: 0;
+}
+
+.farmer-product-box-right {
+    right: 0;
+}
+
+#btn-farmer {
+    position: absolute;
+    width: 185px;
+    height: 49px;
+    bottom: 36px;
+    left: 102px;
+}
+
+@media (max-width: 1440px) {
+
+    #eoljang-map {
+        display: block;
+        width: 100%;
+        max-height: 5309px;
+    }
+}
+
+@media screen and (max-device-width: 767px) {
+
+    #map-header {
+        display: block;
+        width: 100%;
+        max-height: 567px;
+        background-color: #ffe355;
+    }
+
+    #eoljang-body {
+        position: relative;
+        height: 5309px;
+        max-width: 767px;
+        background-color: #ffffff;
+    }
+
+    #eoljang-map, #map-text-box {
+        display: none;
+    }
+
+    #road-bg {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        max-width: 767px;
+        background-color: #ffffff;
+        padding: 0px 0;
+        margin: auto;
+    }
+
+    #eoljang-road {
+        position: absolute;
+        top: 0%;
+        left: 46.67%;
+        width: 7.01%;
+        height: 100%;
+        max-width: 95.9px;
+        background-color: #ffffee;
+    }
+
+    .eoljang-shop {
+        /* max-height: 467.6px */
+        position: absolute;
+        width: 25.97%;
+        height: 4.85%;
+        max-width: 374px;
+    }
+
+    .shop-left {
+        top: 1.28%;
+        left: 11.32%;
+    }
+
+    .shop-right {
+        top: 1.28%;
+        right: 11.32%;
+    }
+
+    .shop-icon {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+    }
+
+    .shop-num {
+        position: absolute;
+        top: 0%;
+        left: 75%;
+        width: 20%;
+        font-family: NotoSansCJKkr;
+        font-size: 28rem;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2.11;
+        letter-spacing: 0.7px;
+        text-align: center;
+        color: #4fb9ab;
+    }
+
+    .shop-name {
+        position: absolute;
+        top: 74.76%;
+        left: 0%;
+        width: 100%;
+        font-family: NotoSansCJKkr;
+        font-size: 20rem;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.23;
+        letter-spacing: 0.6px;
+        text-align: center;
+        color: #000000;
+    }
+
+
+
+}

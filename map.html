@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 직접만든 css -->
+    <link href="./css/base.css" type="text/css" rel="stylesheet" />
+    <link href="./css/map.css" type="text/css" rel="stylesheet" />
+    <!-- 헤더 및 푸터를 불러오는 js -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+    <script src="js/map.js" type="text/javascript"></script>
+
+    <title>장터 지도</title>
+</head>
+<body>
+<a name="anchor0"/>
+<div id="load-header">
+</div>
+
+
+<div id="fullcontainer">
+    <div class="center" id="section-header">
+        <img id="map-header" src="img/map/map_header_mobile.png"/>
+    </div>
+    <div class="center" id="eoljang-body">
+        <img id="eoljang-map" src="img/map/eoljang_bg.jpeg"/>
+        <div id="map-text-box">
+            <div id="map-text-head">5월 13일 DDP에서 얼굴있는 농부시장을 만나세요!</div>
+            <div id="map-text-foot">부스 아이콘 클릭시 농부님의 정보를 볼 수 있습니다.</div>
+        </div>
+        <div class="center" id="road-bg">
+            <div class="center" id="eoljang-road">
+                <!-- map.js에서 동적생성 -->
+            </div>
+        </div>
+    </div>
+    <div class="cd-popup" role="alert">
+        <div class="cd-popup-container" id="popup-container">
+            <div class="cd-popup-close clickable">
+                <img id="btn-close" src="img/map/btn_close.png">
+            </div>
+            <div id="farmer-section">
+                <img id="farmer-focus" src="img/map/farmer_focus.png">
+                <div class="farmer-container">
+                    <div class="farmer-imgbox">
+                        <img id="farmer-img" src="img/base/ic_launcher.png">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="table-country">
+                            <div id="farm-country">
+                                지역
+                            </div>
+                        </div>
+                        <div id="farm-name">
+                            농장
+                        </div>
+                        <div class="farmer-name-container">
+                                  <span id="farmer-name">
+                                      농부
+                                  </span>
+                            <span id="farmer-name-end">
+                                      님
+                                  </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="farmer-product-container">
+                <div class="farmer-product-box farmer-product-box-left">
+                    <img id="farmer-product-left" src="img/base/ic_launcher.png">
+                </div>
+                <div class="farmer-product-box farmer-product-box-right">
+                    <img id="farmer-product-right" src="img/base/ic_launcher.png">
+                </div>
+                <div id="btn-farmer" class="clickable" onclick="onClick(this.id, 1)">
+                    <img src="img/map/btn_farmer.png">
+                </div>
+            </div>
+        </div> <!-- cd-popup-container -->
+    </div> <!-- cd-popup -->
+</div>
+
+<div id="load-footer">
+</div>
+</body>
+</html>

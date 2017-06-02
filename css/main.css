@@ -1,0 +1,330 @@
+#full_container {
+  position: relative;
+}
+
+
+#farmer-banner {
+  width: 100%;
+  height: auto;
+}
+
+#farmer-contents {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+#farmer-icon {
+  width: 70px;
+  height: 69px;
+  margin-top: 70px;
+  object-fit: contain;
+}
+
+#main_title {
+  font-family: 'NotoSansKR-Regular';
+  font-size: 36rem;
+  color: #000000;
+  margin: 29px 11% 0 11%;
+  text-decoration: underline;
+  text-align: center;
+}
+
+#main_subtitle {
+  font-family: 'NotoSansKR-Regular';
+  font-size: 18rem;
+  color: #000000;
+  margin: 24px 11% 0 11%;
+  text-align: center;
+}
+
+.farmer_intro {
+  margin-top: 83px;
+
+}
+
+.farmer-container {
+  width: 280px;
+  display: inline-block;
+  margin: 0 -35px;
+  filter: grayscale(1);
+  position: relative;
+  z-index: 0;
+}
+
+.farmer-container:hover {
+  filter: grayscale(0);
+  position: relative;
+  z-index: 1;
+}
+
+
+#mobile-container {
+  display: none;
+}
+
+#farmer-section-mobile {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  vertical-align: top;
+  margin-top: 43px;
+  padding-top: 16.86%;
+}
+
+#farmer-focus {
+  position: absolute;
+  width: 27.78%;
+  height: auto;
+  top: 13.39%;
+  left: 36.11%;
+}
+
+
+#farmer11 {
+  position: absolute;
+  top: 0;
+  left: -15.27%;
+}
+
+
+#farmer12 {
+  position: absolute;
+  top: 0;
+  left: 30.56%;
+}
+
+
+#farmer13 {
+  position: absolute;
+  top: 0;
+  left: 76.39%;
+}
+
+#farmer11 .farmer-img, #farmer13 .farmer-img {
+  filter: grayscale(1);
+}
+
+.farmer-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.farmer-info {
+  margin: 52px 22.86% 0 22.86%;
+  text-align: left;
+  width: 100%;
+}
+
+.table-country {
+  background-color: #4fb9ab;
+  width: auto;
+  height: auto;
+  padding: 4px 6px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.farm-country {
+  font-family: NotoSansCJKkr;
+  font-size: 14rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;;
+  color: #ffffff;
+}
+
+.farmer-name-container {
+  text-align: left;
+  margin-bottom: 3%;
+  font-family: NotoSansCJKkr;
+  font-size: 24rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: #000000;
+}
+
+.farm-name {
+  margin-top: 4px;
+  text-align: left;
+  font-family: NotoSansCJKkr;
+  font-size: 24rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: #000000;
+}
+
+.farmer-name {
+  text-decoration: underline;
+}
+
+.line {
+  height: 4px;
+  border: solid 4px #e8e8e8;
+}
+
+.section-line {
+  width: 83.33%;
+  margin: 80px auto;
+}
+
+#product-section {
+  padding: 0px 0;
+  margin: 70px 11%;
+  text-align: center;
+}
+
+.product-container {
+  display: inline-block;
+  position: relative;
+  width: 21.42%;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.product-img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3.3%;
+  border: solid 1px #e8e8e8;
+}
+
+.product-basket {
+  position: absolute;
+  top: 72.62%;
+  right: 0;
+  width: 10.42%;
+  height: 9.83%;
+}
+
+.product-farmer-container {
+  text-align: left;
+  font-family: NotoSansCJKkr-Demi;
+  font-size: 18rem;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: #9b9b9b;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 10px;
+}
+
+.product-farmer {
+  text-decoration: underline;
+}
+
+.product-name {
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  text-align: left;
+  color: #000000;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.product-amount {
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  text-align: left;
+  color: #000000;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.product-price {
+  font-family: NotoSansCJKkr;
+  font-size: 20rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  text-align: right;
+  color: #000000;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+#btn-story {
+  width: 153px;
+  height: 40px;
+  margin: 40px auto;
+  display: block;
+}
+
+.notice-text {
+  font-family: 'NotoSansKR-Regular';
+  font-size: 36rem;
+  color: #000000;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* IMAGE SLIDER START */
+#scrolling {
+  overflow: hidden;
+  width: 100%;
+}
+
+#scrolling-section {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#scrolling-section li {
+  float: left;
+}
+
+/* IMAGE SLIDER END */
+
+@media screen and (max-device-width: 767px) {
+
+  /*
+  #farmer-banner, #farmer-icon, #main_title, #main_subtitle {
+    display: none;
+  }
+  */
+
+  .farmer-container {
+    width: 140px;
+    margin: 0 12.5px;
+  }
+
+  #product-section {
+    margin: 0 auto;
+  }
+
+  .product-container {
+    width: 42.7%;
+    margin: 1.75%;
+  }
+}

@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@font-face{font-family:'NotoSansKR-Regular'; src:url('../font/NotoSansKR-Regular.otf')}
+@font-face{font-family:'Noto Sans'; src:url('../font/NotoSansKR-Regular.otf')}
+@font-face{font-family:'NotoSansCJKkr'; src:url('../font/NotoSansKR-Regular.otf')}
+@font-face{font-family:'NotoSansCJKkr-Demi'; src:url('../font/NotoSansKR-Light.otf')}
+@font-face{font-family:'NotoSansCJKkr-DL'; src:url('../font/NotoSansKR-Light.otf')}
+@font-face{font-family:'NotoSansCJKkr-B'; src:url('../font/NotoSansKR-Bold.otf')}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 1px;
+}
+
+@media (max-width: 1296px) {
+    html {
+        font-size: 0.9px;
+    }
+}
+
+@media (max-width: 1152px) {
+    html {
+        font-size: 0.8px;
+    }
+}
+
+@media (max-width: 1008px) {
+    html {
+        font-size: 0.7px;
+    }
+}
+
+@media (max-width: 864px) {
+    html {
+        font-size: 0.6px;
+    }
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* HERE STARTS THE MAGIC */
+header {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    z-index: 1;
+    max-height: 160px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.content-wrapper {
+    background-color: white;
+    top: 165px;
+    min-height: 12%;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+/* HERE ENDS THE MAGIC */
+/*
+header .container {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+*/
+
+section {
+    padding: 0px 0;
+    width: 100%;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+/*
+왕 신기한 연산자
+hr.star-primary:after {
+    color: #2c3e50;
+    background-color: #fff;
+}
+*/
+
+.navbar-brand {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar-nav.navbar-right .btn {
+    position: relative;
+    z-index: 2;
+    padding: 4px 20px;
+    margin: 10px auto;
+    transition: transform 0.3s;
+}
+
+.navbar .navbar-collapse {
+    position: relative;
+    overflow: hidden !important;
+}
+
+.navbar .navbar-collapse .navbar-right > li:last-child {
+    padding-left: 22px;
+}
+
+.navbar .nav-collapse {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding-right: 120px;
+    padding-left: 80px;
+    width: 100%;
+}
+
+.navbar.navbar-default .nav-collapse {
+    background-color: #f8f8f8;
+}
+
+.navbar.navbar-inverse .nav-collapse {
+    background-color: #222;
+}
+
+.navbar .nav-collapse .navbar-form {
+    border-width: 0;
+    box-shadow: none;
+}
+
+.nav-collapse > li {
+    float: right;
+}
+
+.btn.btn-circle {
+    border-radius: 50px;
+}
+
+.btn.btn-outline {
+    background-color: transparent;
+}
+
+.navbar-nav.navbar-right .btn:not(.collapsed) {
+    background-color: rgb(111, 84, 153);
+    border-color: rgb(111, 84, 153);
+    color: rgb(255, 255, 255);
+}
+
+.navbar.navbar-default .nav-collapse,
+.navbar.navbar-inverse .nav-collapse {
+    height: auto !important;
+    transition: transform 0.3s;
+    transform: translate(0px, -50px);
+}
+
+.navbar.navbar-default .nav-collapse.in,
+.navbar.navbar-inverse .nav-collapse.in {
+    transform: translate(0px, 0px);
+}
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar .nav-collapse {
+        margin: 7.5px auto;
+        padding: 0;
+    }
+
+    .navbar .nav-collapse .navbar-form {
+        margin: 0;
+    }
+
+    .nav-collapse > li {
+        float: none;
+    }
+
+    .navbar.navbar-default .nav-collapse,
+    .navbar.navbar-inverse .nav-collapse {
+        transform: translate(-100%, 0px);
+    }
+
+    .navbar.navbar-default .nav-collapse.in,
+    .navbar.navbar-inverse .nav-collapse.in {
+        transform: translate(0px, 0px);
+    }
+
+    .navbar.navbar-default .nav-collapse.slide-down,
+    .navbar.navbar-inverse .nav-collapse.slide-down {
+        transform: translate(0px, -100%);
+    }
+
+    .navbar.navbar-default .nav-collapse.in.slide-down,
+    .navbar.navbar-inverse .nav-collapse.in.slide-down {
+        transform: translate(0px, 0px);
+    }
+}
+
+/* HEADER */
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#page-top {
+    width: 100%;
+    height: 160px;
+}
+
+#header-section-up {
+    width: 100%;
+    height: 16px;
+    background-color: #c7efde;
+}
+
+#header-section-center {
+    width: 100%;
+    height: 144px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#header-bg {
+    width: 142px;
+    height: 78px;
+    margin: 33px auto;
+}
+
+#basket-badge {
+    border-radius: 100%;
+    display: none;
+    position: absolute;
+    top: 9px;
+    right: -9px;
+    width: 20px;
+    height: 20px;
+    background-color: #ea463b;
+    font-size: 12px;
+    letter-spacing: -0.6px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/*
+   navigation bar는 메뉴 간 margin 등은 pixel로 고정한 채 단계별로 줄이다가 일정 뷰포트 이하에서 mobile navigation bar로 변경
+ */
+
+.navbar {
+    margin: 0;
+    overflow: auto;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+    padding: 0px 0;
+    margin: auto;
+}
+
+.navbar-default {
+    border: none;
+    background-image: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#navbar-collapse-2 {
+    width: 1240px;
+    height: 48px;
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: 0 auto;
+    visibility: visible !important;
+    display: block !important;
+}
+/* navigation bar font-size 고정 */
+.navbar-left {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.9px;
+    text-align: center;
+    color: #000000;
+    display: inline-block;
+}
+
+.nav-border-white {
+    border-left: solid 1px #ffffff;
+}
+
+.nav-border-grey {
+    border-left: solid 1px #9b9b9b;
+}
+
+/* navigation bar font-size 고정 */
+.navbar-right {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.7px;
+    text-align: right;
+    color: #000000;
+    display: inline-block;
+}
+
+.nav-item {
+    height: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.nav-item a {
+    padding: 0 !important;
+    margin: auto 24px;
+}
+
+.menu-vertical-line {
+    width: 2px;
+    height: 24px;
+}
+
+.white-line {
+    border: solid 1px #ffffff;
+}
+
+.grey-line {
+    border: solid 1px #9b9b9b;
+}
+
+#home-box {
+    width: 48px;
+    height: 48px;
+    background-color: #ededed;
+}
+
+#btn-home {
+    width: 24px;
+    height: 24px;
+}
+
+#btn-basket-header {
+    width: 20px;
+    height: 25px;
+}
+
+#content-nav {
+    position: absolute;
+    background-color: #ffffff;
+    top: 160px;
+    height: 48px;
+    z-index: 2;
+    width: 100%;
+}
+
+.content-footer {
+    background-color: #4a4a4a;
+    bottom: 0;
+    width: 100%;
+}
+
+
+@media screen and (max-device-width: 767px) {
+    header, #load-footer {
+        display: none;
+    }
+
+    #content-nav {
+        top: 0;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    height: 240px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    text-align:center;
+}
+
+#footer-box {
+    position: absolute;
+    margin: 40px 13.3%;
+    top: 0;
+    left: 0;
+    height: 168px;
+    width: 73.4%;
+}
+
+#footer-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 108px;
+    height: 64px;
+}
+
+#footer-btn-text1 {
+    position: absolute;
+    top: 0;
+    left: 142px;
+    font-family: NotoSansCJKkr;
+    font-size: 14rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.7px;
+    color: #ffffff;
+}
+
+#footer-btn-text2 {
+    position: absolute;
+    top: 0;
+    left: 237px;
+    font-family: NotoSansCJKkr;
+    font-size: 14rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.7px;
+    color: #ffffff;
+}
+
+#footer-text1 {
+    position: absolute;
+    bottom: 0;
+    left: 142px;
+    font-family: NotoSansCJKkr;
+    font-size: 14rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.7px;
+    color: #ffffff;
+    text-align: left;
+}
+
+#btn-instagram {
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+#btn-facebook {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+#btn-blog {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+
+    footer {
+        max-width: 1440px;
+    }
+
+
+}
+
+/* MAIN CONTAINER */
+
+#fullcontainer {
+    position: relative;
+    padding: 48px 0;
+}

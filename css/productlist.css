@@ -1,0 +1,113 @@
+#list-title {
+    margin-top: 3.5%;
+    margin-bottom: 2.9%;
+    font-family: NotoSansCJKkr;
+    font-size: 30rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.5px;
+    text-align: center;
+    color: #000000;
+    text-decoration: underline;
+}
+
+#product-section {
+    padding: 0px 0;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.product-container {
+    display: inline-block;
+    position: relative;
+    max-width: 480px;
+    max-height: 661px;
+    width: 33.3%;
+    height: 32.1%;
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+}
+
+.product-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 93.3%;
+    height: auto;
+    max-width: 480px;
+    max-height: 480px;
+    padding: 3.3%;
+    border: solid 1px #e8e8e8;
+}
+
+.product-basket {
+    position: absolute;
+    top: 72.62%;
+    right: 0;
+    width: 10.42%;
+    height: auto;
+}
+
+.product-farmer-container {
+    text-align: left;
+    font-family: NotoSansCJKkr-Demi;
+    font-size: 18rem;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.5px;
+    color: #9b9b9b;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.product-farmer {
+    text-decoration: underline;
+}
+
+.product-name {
+    font-family: NotoSansCJKkr;
+    font-size: 24rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    text-align: left;
+    color: #000000;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.product-amount {
+    font-family: NotoSansCJKkr;
+    font-size: 24rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    text-align: left;
+    color: #000000;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.product-price {
+    font-family: NotoSansCJKkr;
+    font-size: 24rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    text-align: right;
+    color: #000000;
+    margin-left: 16px;
+    margin-right: 16px;
+}

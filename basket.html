@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 직접만든 css -->
+    <link href="./css/base.css" type="text/css" rel="stylesheet" />
+    <link href="./css/basket.css" type="text/css" rel="stylesheet" />
+    <!-- 헤더 및 푸터를 불러오는 js -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+    <script src="js/basket.js" type="text/javascript"></script>
+
+    <title>장바구니</title>
+</head>
+<body>
+<div id="load-header">
+</div>
+
+<div id="fullcontainer">
+    <div id="order-title">
+        장바구니
+    </div>
+    <div id="checkdelete-container">
+        <div id="btn-checkdelete" class="clickable" onclick="onClick(this.id)">
+            <div id="text-checkdelete">선택 항목 삭제</div>
+        </div>
+    </div>
+    <div id="order-container">
+        <div id="order-table-title">
+            <div class="table-title" id="order-table-farmer">
+                판매자
+            </div>
+            <div class="table-title" id="order-table-info">
+                <input class="order-table-checkbox" id="allcheck" value="no" type="checkbox">
+                상품 정보
+            </div>
+            <div class="table-title table-left-line" id="order-table-price">
+                판매가
+            </div>
+            <div class="table-title table-left-line" id="order-table-count">
+                수량(ea)
+            </div>
+            <div class="table-title table-left-line" id="order-table-allprice">
+                주문 금액
+            </div>
+            <div class="table-title table-left-line" id="order-table-shipping">
+                택배 주문 시 배송비
+            </div>
+        </div>
+
+        <div id="order-table-product">
+            <!--
+            <div class="table-farm">
+                <div class="table-product">
+                    <div class="product-cell-farmer">
+                        <div class="product-farm">아침농장</div>
+                        <div class="product-farmer"><span class="product-farmer-name">노환표농부</span>
+                            <span class="product-farmer-end">님</span></div>
+                    </div>
+                    <div class="product-cell-info">
+                        <input class="product-checkbox" name="product" value="1" type="checkbox">
+                        <img class="product-img" src="img/main/product_ex1.jpg">
+                        <div class="product-info">
+                            <div class="product-name">친환경 도라지 배즙 1박스</div>
+                            <div class="product-amount">30개, 110ml</div>
+                        </div>
+                    </div>
+                    <div class="product-cell-price">
+                        <div class="product-price">30,000원</div>
+                    </div>
+                    <div class="product-cell-count">
+                        <img class="btn-minus" src="img/basket/ic-minus.png">
+                        <div class="product-count">1</div>
+                        <img class="btn-plus" src="img/basket/ic-plus.png">
+                    </div>
+                    <div class="product-cell-allprice">
+                        <div class="product-allprice">30,000원</div>
+                    </div>
+                </div>
+                <div class="product-shipping">
+                    3,000원
+                </div>
+            </div>
+            <div class="table-farm">
+                <div class="table-product">
+                    <div class="product-cell-farmer">
+                        <div class="product-farm">아침농장</div>
+                        <div class="product-farmer"><span class="product-farmer-name">노환표농부</span>
+                            <span class="product-farmer-end">님</span></div>
+                    </div>
+                    <div class="product-cell-info">
+                        <input class="product-checkbox" name="product" value="1" type="checkbox">
+                        <img class="product-img" src="img/main/product_ex1.jpg">
+                        <div class="product-info">
+                            <div class="product-name">친환경 도라지 배즙 1박스</div>
+                            <div class="product-amount">30개, 110ml</div>
+                        </div>
+                    </div>
+                    <div class="product-cell-price">
+                        <div class="product-price">30,000원</div>
+                    </div>
+                    <div class="product-cell-count">
+                        <img class="btn-minus" src="img/basket/ic-minus.png">
+                        <div class="product-count">1</div>
+                        <img class="btn-plus" src="img/basket/ic-plus.png">
+                    </div>
+                    <div class="product-cell-allprice">
+                        <div class="product-allprice">30,000원</div>
+                    </div>
+                </div>
+                <div class="table-product">
+                    <div class="product-cell-farmer">
+                        <div class="product-farm">아침농장</div>
+                        <div class="product-farmer"><span class="product-farmer-name">노환표농부</span>
+                            <span class="product-farmer-end">님</span></div>
+                    </div>
+                    <div class="product-cell-info">
+                        <input class="product-checkbox" name="product" value="1" type="checkbox">
+                        <img class="product-img" src="img/main/product_ex1.jpg">
+                        <div class="product-info">
+                            <div class="product-name">친환경 도라지 배즙 1박스</div>
+                            <div class="product-amount">30개, 110ml</div>
+                        </div>
+                    </div>
+                    <div class="product-cell-price">
+                        <div class="product-price">30,000원</div>
+                    </div>
+                    <div class="product-cell-count">
+                        <img class="btn-minus" src="img/basket/ic-minus.png">
+                        <div class="product-count">1</div>
+                        <img class="btn-plus" src="img/basket/ic-plus.png">
+                    </div>
+                    <div class="product-cell-allprice">
+                        <div class="product-allprice">30,000원</div>
+                    </div>
+                </div>
+                <div class="table-product">
+                    <div class="product-cell-farmer">
+                        <div class="product-farm">아침농장</div>
+                        <div class="product-farmer"><span class="product-farmer-name">노환표농부</span>
+                            <span class="product-farmer-end">님</span></div>
+                    </div>
+                    <div class="product-cell-info">
+                        <input class="product-checkbox" name="product" value="1" type="checkbox">
+                        <img class="product-img" src="img/main/product_ex1.jpg">
+                        <div class="product-info">
+                            <div class="product-name">친환경 도라지 배즙 1박스</div>
+                            <div class="product-amount">30개, 110ml</div>
+                        </div>
+                    </div>
+                    <div class="product-cell-price">
+                        <div class="product-price">30,000원</div>
+                    </div>
+                    <div class="product-cell-count">
+                        <img class="btn-minus" src="img/basket/ic-minus.png">
+                        <div class="product-count">1</div>
+                        <img class="btn-plus" src="img/basket/ic-plus.png">
+                    </div>
+                    <div class="product-cell-allprice">
+                        <div class="product-allprice">30,000원</div>
+                    </div>
+                </div>
+                <div class="product-shipping">
+                    3,000원
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+    <div id="price-container">
+        <div id="price-left">
+            <div id="pricebox-allprice">
+                <div id="price-title">총 상품 금액 (0개)</div>
+                <div id="price-contents">0원</div>
+            </div>
+            <div id="pricebox-ordertype">
+                <img id="ic-add-white" src="img/basket/ic-add-white.png">
+                <div id="pricebox-shipping">
+                    <div id="text-box-shipping">
+                        <div id="delivery-shipping-title">택배 배송</div>
+                        <div id="delivery-shipping-contents">0원</div>
+                    </div>
+                    <div id="text-box-preorder">
+                        <div id="preorder-shipping-title">프리오더</div>
+                        <div id="preorder-shipping-contents">배송비 없음</div>
+                    </div>
+                </div>
+                <div id="radiobtn-box">
+                    <div id="text-box-radiobtn-delivery">
+                        <input id="radiobtn-delivery" name="ordertype" value="2" checked="checked" type="radio">
+                        <div id="delivery-order">택배 배송 주문하기</div>
+                    </div>
+                    <div id="text-box-radiobtn-preorder">
+                        <input id="radiobtn-preorder" name="ordertype" value="1" type="radio">
+                        <div id="preorder-order">프리오더 주문하기</div>
+                    </div>
+                    <!-- db에는 pre-order가 1, 배송 주문이 2로 되어있어 그 값을 따름 -->
+                </div>
+            </div>
+        </div>
+        <div id="price-right">
+            <img id="ic-equal" src="img/basket/ic-equal.png">
+            <div id="allpricebox">
+                <div id="allprice-title">총 결제 금액</div>
+                <div id="allprice-contents">0원</div>
+            </div>
+        </div>
+    </div>
+    <div id="bottombtn-container">
+        <div id="btn-back" class="clickable" onclick="onClick(this.id, null)">
+            <div id="text-back">상품 목록으로 돌아가기</div>
+        </div>
+        <div id="btn-confirm" class="clickable" onclick="onClick(this.id, null)">
+            <div id="text-confirm">주문자 정보 입력 및 결제</div>
+        </div>
+    </div>
+</div>
+
+<div id="load-footer">
+</div>
+</body>
+</html>
