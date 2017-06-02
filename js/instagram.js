@@ -1,5 +1,5 @@
 var i;
-var CREATE_IMAGE_AMOUNT = 12;
+var CREATE_IMAGE_AMOUNT = 15;
 var imgArr = [];
 var linkArr = [];
 
@@ -8,7 +8,7 @@ function startLoadFile(DeviceId){
 
     $.ajax({
         type: "POST",
-        url: "./insta/tagcontent",
+        url: "https://api.eoljang.com/insta/tagcontent",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
         },

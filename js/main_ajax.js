@@ -15,7 +15,7 @@ function farmerList(){
     var DeviceId = '10259273-4a1a-e95b-b29b-4ba0ba47a352';
     $.ajax({
         type: "GET",
-        url: "./farmer/list",
+        url: "https://api.eoljang.com/farmer/list",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
         },
@@ -127,7 +127,7 @@ function order_query(){
 
     $.ajax({
         type: "POST",
-        url: "./order/query",
+        url: "https://api.eoljang.com/order/query",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
             xhr.setRequestHeader("X-Eoljang-Token" , Accesstoken);

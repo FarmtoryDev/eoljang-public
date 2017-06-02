@@ -14,7 +14,7 @@ function basketList(){
 
     $.ajax({
         type: "POST",
-        url: "./basket/list",
+        url: "https://api.eoljang.com/basket/list",
         cache:false,
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
