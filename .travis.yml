@@ -7,7 +7,7 @@ deploy:
   access_key_id: AKIAJDMP3U2UAUS75GPQ
   secret_access_key:
     secure: OJ3f6VidJQ7dhOT3OFGambXssYc8vJ26r3g/XmIvFxmFICUa+NIQeM5t69VxYvPZhq+IHsPbSBPOFugAkhWXFlID4NYxOfxtY7MigGKH51BOdK0WVvRJR+g6xVN04POtE17CDa+eAoTlLyuBL1BZn82xliUG1ukO9/kZOEO/vj/ltJ0Pa8kkmGuvub5IFGY2kmHa9b/u7eAvWn42GDpniRTg3Y35em/qqu8fXVEft6eN0k/Ft/gGHhMN5zDHLCZBqmfwcNyvSFTFAcPx4DQDM28NKAzvZvYr5dCj39SYjuY66gBP8AXmvO5oeaLfQzsGN/olQw1xA0AOXkyLOGHS2SUh+iQWRMA/GFubhCO3F5zX04X8hc9WKqW7gR3jMbjiDLceutWzv0CmMGPQjgToM+MtwQBleBO9e8WZT5HHhPs1TCZGJ7DvKdOspsktS7iKWn/xLZGe346RyPkteVfY/DUWmvMvYO/wPC88Qk90bwOZgtGLGwJHhnVz3fmkDib5akvSc5zsVCLXemr/32udNoTGvA73kXEiMBRfP5/TihJ4Uqks14wLwSU5y3HkVzyiAuW8jWgKnRPpqrLjYy2GPZ5/5OMEz00Txif8AVFBWUYIYMTX67acVFnUTZjVdogLa1GdyXHJiNccfUXv9CnZi385DKrpyjS79S5irbVMo8E=
-  bucket: eoljang-public
+  bucket: www.eoljang.com
   acl: public_read
   on:
     repo: FarmtoryDev/eoljang-public
