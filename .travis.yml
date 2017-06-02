@@ -1,8 +1,7 @@
 install: true
 script: echo
 branches:
-  only:
-    - master
+  only: master
 deploy:
   provider: s3
   access_key_id: AKIAJDMP3U2UAUS75GPQ
