@@ -63,7 +63,7 @@
 
         prepareTask = function () {
             var naver_id_login_app = new naver_id_login()
-            let access_token = naver_id_login_app.oauthParams.access_token;
+            var access_token = naver_id_login_app.oauthParams.access_token;
             console.log("access_token: "+access_token);
             var result_data;
             $.ajax({
@@ -76,29 +76,26 @@
                 dataType:"json",
                 contentType: "application/json",
                 success: function (data) {
+                    if (data.result) {
+                        result_data = data.data;
 
-                    //console.log("success");
-                    //console.log(JSON.stringify(data));
-                    /*
-                     결과값
-                     {"data":{"accesstoken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsb2dpbnNlc3Npb24iLCJhdWQiOiJhZTg0NGFkZS0xZjM4LWYxNDMtZGY3Ny00ZDkyMmM1MzkxZjkiLCJpc3MiOiJlb2xqYW5nX3NlcnZlciIsInVzZXJpbmZvIjp7Im5pY2tuYW1lIjoiXHVjNzc0XHVjOGZjXHVjNmQwIiwic29jaWFsIjoxLCJzYXZlZGluZm8iOnsibmFtZSI6Ilx1Yzc3NFx1YzhmY1x1YzZkMCIsImVtYWlsIjoic2F2ZW43Nzg4QG5hdmVyLmNvbSJ9LCJpZCI6Mn0sImV4cCI6IjE0OTA0MDUzNzUiLCJpYXQiOiIxNDkwMzgzNzc1In0.oSjwmSumVRRa-04TPTnbPCffGeDZip-gHlFVWW1WXiBsjANjZbG9TY88gaBtfymg","email":"saven7788@naver.com","expire":"1490405375"},"message":"success","result":true}
-                     */
-
-
-                    result_data = data.data
-                    console.log(result_data.accesstoken);
-
-                    window.opener.sessionStorage.setItem('accesstoken', result_data.accesstoken);
-                    // sessionStorage에 넣는 것 확인하는 코드
-                    var data = window.opener.sessionStorage.getItem('accesstoken');
-                    console.log(data);
-                    extractToken(device_id, data);
-
+                        window.opener.sessionStorage.setItem('accesstoken', result_data.accesstoken);
+                        // sessionStorage에 넣는 것 확인하는 코드
+                        extractToken(device_id, result_data.accesstoken);
+                    } else {
+                        console.log("error");
+                        console.log(e);
+                        alert("로그인에 실패하였습니다.");
+                        var parentWindow = window.opener;
+                        parentWindow.location.href = './main.html';
+                        window.close();
+                    }
 
                 },
                 error: function (e) {
                     console.log("error");
                     console.log(e);
+                    alert("로그인에 실패하였습니다.");
                     var parentWindow = window.opener;
                     parentWindow.location.href = './main.html';
                     window.close();
