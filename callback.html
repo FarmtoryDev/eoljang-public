@@ -68,7 +68,7 @@
             var result_data;
             $.ajax({
                 type: "POST",
-                url: "./member/auth",
+                url: "https://api.eoljang.com/member/auth",
                 data: JSON.stringify({"type": 1, "data": {"accesstoken": access_token}}),
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("X-Device-Id" , device_id);
@@ -117,7 +117,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "./member/extracttoken",
+                url: "https://api.eoljang.com/member/extracttoken",
                 cache: false,
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("X-Device-Id", DeviceId);
