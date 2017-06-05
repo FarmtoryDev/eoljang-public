@@ -16,14 +16,14 @@ $(document).ready(function(){
     }
     DeviceId = sessionStorage.getItem('device_id');
     Accesstoken = sessionStorage.getItem('accesstoken');
+    getUserName();
     // 1200px 이하의 화면에서 navigation bar 수평 스크롤 가능하게 하는 jquery
     $(".navbar").scrollLeft(300);
 });
 
-$(window).load(function () {
-    getUserName();
-    setTimeout(getUserName(), 500); // navigation bar load를 기다리기 위한 타이머
-});
+// $(window).load(function () {
+//     setTimeout(getUserName(), 500); // navigation bar load를 기다리기 위한 타이머
+// });
 /*
 function extractToken(DeviceId, Accesstoken) {
     // 유저 토큰 확인
