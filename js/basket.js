@@ -209,6 +209,14 @@ function allSelect() {
     $("#allcheck").click(function () {
         if($("#allcheck").prop("checked")) {
             $("input[name = product]").prop("checked", true);
+
+        } else {
+            $("input[name = product]").prop("checked", false);
+        }
+    });
+    $("#allcheck-mobile").click(function () {
+        if($("#allcheck-mobile").prop("checked")) {
+            $("input[name = product]").prop("checked", true);
         } else {
             $("input[name = product]").prop("checked", false);
         }
@@ -225,8 +233,10 @@ function allSelect() {
             }
             if (productCheckbox.length == checkedProduct.length) {
                 $("#allcheck").prop("checked", true);
+                $("#allcheck-mobile").prop("checked", true);
             } else {
                 $("#allcheck").prop("checked", false);
+                $("#allcheck-mobile").prop("checked", false);
             }
         })
     });
