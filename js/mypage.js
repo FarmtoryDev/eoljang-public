@@ -4,39 +4,6 @@ var grouping_farmer = new Array; // 배송비 계산 및 농부별 모음 정렬
 var grouping_order_list = new Array; // 2차 배열 {{grouping_order_content[0]}, {grouping_order_content[1]}}...
 var SHIPPING_UNIT = 3000; // 배송비 단위
 
-var sampledata = {
-    "data": {
-        "basket_list": [
-            {
-                "count": 1,
-                "product_id": 4,
-                "product_info": {
-                    "farmer_name": "노환표",
-                    "name": "동결건조 배칩",
-                    "price": 5000,
-                    "thumbnail": [ "http://cfile202.uf.daum.net/image/2112264D58D4E9B620B3BF" ],
-                    "unit": [ 30, "g" ]
-                },
-                "update": "Sat, 25 Mar 2017 14:55:08 GMT"
-            },{
-                "count": 1,
-                "product_id": 4,
-                "product_info": {
-                    "farmer_name": "노환표",
-                    "name": "동결건조 배칩",
-                    "price": 5000,
-                    "thumbnail": [ "http://cfile202.uf.daum.net/image/2112264D58D4E9B620B3BF" ],
-                    "unit": [ 30, "g" ]
-                },
-                "update": "Sat, 25 Mar 2017 14:55:08 GMT"
-            }
-        ]
-    },
-    "message": "success",
-    "result": true
-};
-
-
 function onClick(name, target) {
     // 버튼 클릭 이벤트 모음
     switch (name) {
@@ -62,14 +29,78 @@ function onClick(name, target) {
                 loadOrder(DeviceId, Accesstoken, orderType);
             }
             break;
-        case "btn-receive" :
-            var doConfirm = confirm("수령완료 하시겠습니까?");
+        case "btn-cancel" :
+            var doConfirm = confirm("해당 상품을 주문취소 하시겠습니까?");
             if (doConfirm) {
-                alert("수령완료 처리되었습니다.")
+                $.ajax({
+                    type: "POST",
+                    url: "https://api.eoljang.com/order/cancel",
+                    cache:false,
+                    data: "order_id=" + target,
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("X-Device-Id" , DeviceId);
+                        xhr.setRequestHeader("X-Eoljang-Token" , Accesstoken);
+                        xhr.setRequestHeader("Content-Type" , "application/x-www-form-urlencoded");
+
+                    },
+                    dataType:"json",
+                    contentType: "application/json",
+                    success: function (data) {
+                        console.log(data);
+                        if(data.result) {
+                            alert("주문취소 처리되었습니다.");
+                        } else {
+                            console.log("error");
+                            console.log(data);
+                            alert("주문취소 처리 중 에러가 발생했습니다. \n담당자에게 연락해주시길 바랍니다.");
+                        }
+                    },
+                    error: function (e) {
+                        console.log("error");
+                        console.log(e);
+                        alert("주문취소 처리 중 에러가 발생했습니다. \n담당자에게 연락해주시길 바랍니다.");
+                    }
+                });
             }
             break;
         default :
             break;
+    }
+}
+
+function onClickConfirm(orderId, productId) {
+    // 수령 완료 버튼 클릭 이벤트
+    var doConfirm = confirm("해당 상품을 수령완료 하시겠습니까?");
+    if (doConfirm) {
+        $.ajax({
+            type: "POST",
+            url: "https://api.eoljang.com/order/confirm",
+            cache:false,
+            data: "order_id=" + orderId + "&product_id=" + productId,
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader("X-Device-Id" , DeviceId);
+                xhr.setRequestHeader("X-Eoljang-Token" , Accesstoken);
+                xhr.setRequestHeader("Content-Type" , "application/x-www-form-urlencoded");
+
+            },
+            dataType:"json",
+            contentType: "application/json",
+            success: function (data) {
+                console.log(data);
+                if(data.result) {
+                    alert("수령완료 처리되었습니다.");
+                } else {
+                    console.log("error");
+                    console.log(e);
+                    alert("수령완료 처리 중 에러가 발생했습니다.");
+                }
+            },
+            error: function (e) {
+                console.log("error");
+                console.log(e);
+                alert("수령완료 처리 중 에러가 발생했습니다.");
+            }
+        });
     }
 }
 
@@ -93,10 +124,11 @@ function makeOrder(orderType) {
         var farmName = "";
         var farmerName = "";
         var farmerNameEnd = "";
+        var productStatus = "";
         for (k = 0; k < grouping_order_list[i].length; k++) {
             productCount++;
             order_product_data_content = grouping_order_list[i][k];
-            order_sum_allprice_content = order_sum_allprice_content + (order_product_data_content.info.price * order_product_data_content.count);
+            order_sum_allprice_content = order_sum_allprice_content + (order_product_data_content.info.price * order_product_data_content.count.count);
             if (farmerName != order_product_data_content.info.farmer_name) {
                 // 같은 농부의 첫 상품일 때만 농부명 표시(기존 농부 이름과 이전 상품 농부 이름이 같을 경우 농부명을 표시하지 않음)
                 farmName = order_product_data_content.info.farmer_pname;
@@ -107,6 +139,20 @@ function makeOrder(orderType) {
                 farmerName = "";
                 farmerNameEnd = "";
             }
+            switch (order_product_data_content.count.state) {
+                case 1:
+                    productStatus = "<div class='product-cell-status'><div class='product-status'>주문접수</div>" +
+                        "<div class='btn-receive clickable' onclick='onClick(\"btn-cancel\"," + orderData[i].id + ")'>" +
+                        "<div class='text-receive'>주문취소</div></div></div>";
+                    break;
+                case 2:
+                    productStatus = "<div class='product-cell-status'><div class='product-status'>미수령</div>" +
+                        "<div class='btn-receive clickable' onclick='onClickConfirm(" + orderData[i].id + "," + k + ")'>" +
+                        "<div class='text-receive'>수령완료</div></div></div>";
+                    break;
+                default:
+                    break;
+            }
             table_farm_content += "<div class='table-product'><div class='product-cell-farmer'><div class='product-farm'>" + farmName +
                 "</div><div class='product-farmer'><span class='product-farmer-name'>" + farmerName +
                 "</span><span class='product-farmer-end'>" + farmerNameEnd + "</span></div></div><div class='product-cell-info'>" +
@@ -115,12 +161,10 @@ function makeOrder(orderType) {
                 "<div class='product-amount'>" + order_product_data_content.info.unit[0] + order_product_data_content.info.unit[1] +
                 "</div></div></div><div class='product-cell-price'><div class='product-price'>" +
                 numberWithCommas(order_product_data_content.info.price) + "원</div></div>" +
-                "<div class='product-cell-count'><div class='product-count'>" + order_product_data_content.count +
+                "<div class='product-cell-count'><div class='product-count'>" + order_product_data_content.count.count +
                 "</div></div><div class='product-cell-allprice'><div class='product-allprice'>" +
-                numberWithCommas(order_product_data_content.info.price * order_product_data_content.count) +
-                "원</div></div><div class='product-cell-status'><div class='product-status'>미수령</div>" +
-                "<div class='btn-receive clickable' onclick='onClick(\"btn-receive" + /* 버튼 id */ + "\")'>" +
-                "<div class='text-receive'>수령완료</div></div></div><div></div>";
+                numberWithCommas(order_product_data_content.info.price * order_product_data_content.count.count) +
+                "원</div></div>" + productStatus + "</div><div></div>";
         }
         /*
         var status_content;
