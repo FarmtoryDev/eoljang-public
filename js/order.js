@@ -1,4 +1,3 @@
-//var sampleJSON = '{"result": true, "message": "success", "data": {"basket_list": [{"product_id": 2, "count": 3, "update": "", "product_info":{"farmer_name": "김강산농부", "thumbnail": ["img/main/product_ex1.jpg"], "name": "과일칩", "unit": [1, "kg"], "price": 5000}},{"product_id": 3, "count": 2, "update": "", "product_info":{"farmer_name": "무등산농부", "thumbnail": ["img/main/product_ex2.jpg"], "name": "감자칩", "unit": [300, "g"], "price": 1500}}]}}';
 var order_product_count = new Array;
 var order_farm = new Array;
 var order_farmer_name = new Array;

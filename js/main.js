@@ -1,4 +1,3 @@
-var DeviceId = '10259273-4a1a-e95b-b29b-4ba0ba47a352';
 var farmerListResult = new Array;
 var NUMBER_OF_FARMER = 10;
 var NUMBER_OF_PRODUCTS = 4;
