@@ -344,6 +344,10 @@ hr.star-primary:after {
     margin: auto 24px;
 }
 
+.nav-item a:hover {
+    color: #4fb9ab;
+}
+
 .menu-vertical-line {
     width: 2px;
     height: 24px;

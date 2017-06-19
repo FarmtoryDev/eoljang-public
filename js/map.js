@@ -301,5 +301,6 @@ window.onload = function () {
 }
 
 $(document).ready(function(){
+    $("#nav-map").css("color", "#4fb9ab");
     $(window).resize(setShopContainer())
 });

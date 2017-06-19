@@ -172,7 +172,7 @@ function productDetail(DeviceId, productId){
                 makeOrder(orderBasket);
             } else {
                 console.log("error");
-                console.log(e);
+                console.log(data);
             }
         },
         error: function (e) {

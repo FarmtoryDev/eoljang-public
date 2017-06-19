@@ -104,5 +104,6 @@ window.onload = function () {
 
 
 $(document).ready(function(){
+    $("#nav-productlist").css("color", "#4fb9ab");
     $(window).resize(productResize());
 });

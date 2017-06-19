@@ -46,5 +46,6 @@ function createImages() {
 }
 
 window.onload = function () {
+    $("#nav-instagram").css("color", "#4fb9ab");
     startLoadFile(DeviceId);
 };

@@ -160,6 +160,7 @@ window.onload = function () {
 }
 
 $(document).ready(function(){
+    $("#nav-main").css("color", "#4fb9ab");
     $(window).resize(productResize());
     //$(window).resize(modifySize())
 });

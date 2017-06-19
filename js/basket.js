@@ -404,6 +404,7 @@ function makeOrder(isFirst) {
 // </div>
 
 window.onload = function () {
+    $("#nav-basket").css("color", "#4fb9ab");
     if (sessionStorage.getItem('accesstoken') != undefined) {
         loadBasket(DeviceId, Accesstoken);
         allSelect();

@@ -16,7 +16,7 @@ $(document).ready(function(){
     }
     DeviceId = sessionStorage.getItem('device_id');
     Accesstoken = sessionStorage.getItem('accesstoken');
-    getUserName();
+    //getUserName();
     // 1200px 이하의 화면에서 navigation bar 수평 스크롤 가능하게 하는 jquery
     $(".navbar").scrollLeft(300);
 });
