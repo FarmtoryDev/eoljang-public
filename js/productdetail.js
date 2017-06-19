@@ -19,9 +19,9 @@ function onClick(name) {
         case "btn-order" :
             // 주문하기 (장바구니를 거치지 않고 해당 상품만 구매)
             if (Accesstoken == undefined) {
-                location.replace("login.html");
+                location.href = "login.html";
             } else {
-                location.replace("order.html?basket=false&id=" + product_id + "&count=" + order_product_count);
+                location.href = "order.html?basket=false&id=" + product_id + "&count=" + order_product_count;
             }
             break;
         case "btn-minus" :
@@ -199,7 +199,7 @@ function basketUpdate(DeviceId, Accesstoken, productId, count){
         success: function (data) {
             if (data.result) {
                 // result가 true일 때만 장바구니 화면으로 이동
-                location.replace("basket.html");
+                location.href = "basket.html";
             } else {
                 alert("장바구니를 담는 중 에러가 발생했습니다.");
             }

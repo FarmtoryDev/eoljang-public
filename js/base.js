@@ -260,6 +260,11 @@ function numberWithCommas(num) {
     // \d{3} : 숫자를 3번 반복한 패턴을 찾음
 }
 
+function numberFilter(target) {
+    // 숫자 이외의 문자를 필터링하는 함수
+    return target.replace(/[^0-9]/gi, "");
+}
+
 function scrollToAnchor(aid, relativeTop){
     // a 태그의 id로 자연스럽게 스크롤하는 함(relativeTop은 추가 위치 조정, 30의 경우 aid보다 30 아래까지 스크롤)
     var aTag = $("a[name='"+ aid +"']");

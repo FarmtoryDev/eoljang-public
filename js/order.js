@@ -50,31 +50,59 @@ function onClick(name) {
                     document.getElementById("input-address3").value;
 
             var inputList = document.getElementsByTagName("input");
-            var isAllChecked = true;
-            for (i = 0; i < inputList; i++) {
+            var unCheckedNum = -1; // 입력되지 않은 inputList 번호를 반환
+            for (i = 0; i < inputList.length && unCheckedNum > -1; i++) {
                 if (i < 7) {
                     if(inputList[i].value == "") {
-                        isAllChecked = false;
+                        unCheckedNum = i;
                     }
                 } else {
                     if(!inputList[i].checked) {
-                        isAllChecked = false;
+                        unCheckedNum = i;
                     }
                 }
             }
-            if (isAllChecked) {
-                buy(input_name, input_phone, input_address);
-                // 결제화면
-            } else {
-                // 입력 항목이 비어있을 경우(예외처리 항목별로 제대로 할 것)
-                alert("입력하지 않은 항목이 있거나 약관에 동의하지 않으셨습니다.");
+            switch (unCheckedNum) {
+                case -1:
+                    buy(input_name, input_phone, input_address);
+                    // 결제화면
+                    break;
+                case 0:
+                    alert("주문자 이름이 입력되지 않았습니다.");
+                    break;
+                case 1:
+                    alert("주문자 휴대전화가 입력되지 않았습니다.");
+                    break;
+                case 2:
+                    alert("주문자 휴대전화가 입력되지 않았습니다.");
+                    break;
+                case 3:
+                    alert("주문자 휴대전화가 입력되지 않았습니다.");
+                    break;
+                case 4:
+                    alert("배송 수령지 주소가 입력되지 않았습니다.");
+                    break;
+                case 5:
+                    alert("배송 수령지 주소가 입력되지 않았습니다.");
+                    break;
+                case 6:
+                    alert("배송 수령지 주소가 입력되지 않았습니다.");
+                    break;
+                case 7:
+                    alert("결제대행서비스 약관에 동의하셔야 결제가 진행됩니다.");
+                    break;
+                case 8:
+                    alert("개인정보 제3자 제공 동의에 관한 내용에 동의하셔야 결제가 진행됩니다.");
+                    break;
+                default:
+                    break;
             }
             break;
         case "btn-back" :
             // 장바구니로 돌아가기
             var doBack = confirm("상품 목록으로 돌아가시겠습니까? 결제가 진행되지 않습니다.");
             if (doBack) {
-                location.replace("productlist.html");
+                location.href = "productlist.html";
             }
             break;
         default :
@@ -241,7 +269,7 @@ function makeOrder(orderBasket) {
             "</span><span class='product-farmer-end'>" + "님" + "</span></div></div>" +
             "<div class='product-cell-info'><img class='product-img' src='" + order_basket_list[0].thumbnail[0] +
             "'><div class='product-info'><div class='product-name'>" + order_basket_list[0].name +
-            "</div><div class='product-amount'>" + oneProductCount +
+            "</div><div class='product-amount'>" + order_basket_list[0].unit[0] + order_basket_list[0].unit[1] +
             "</div></div></div>" +
             "<div class='product-cell-price'><div class='product-price'>" + numberWithCommas(order_basket_list[0].price) +
             "</div></div>" +
@@ -433,6 +461,7 @@ function buy(name, phone, address){
                 console.log("data이다",data);
                 if (data.result) {
                     alert("결제가 완료되었습니다.\n(개발 중이므로 실제 결제가 진행되지 않습니다.)");
+                    // 뒤로가기로 돌아갈 수 없도록 replace로 페이지를 대체
                     location.replace("mypage.html");
                     // 나중엔 ordercompleted.html로 리다이렉트 시킬 것
                 } else {

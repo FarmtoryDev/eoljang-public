@@ -58,9 +58,9 @@
     </div>
     <div class="text-box" id="text-box-phone">
         <div class="text-title" id="title-phone">주문자 휴대전화</div>
-        <input id="input-phone1" type="tel">
-        <input id="input-phone2" type="tel">
-        <input id="input-phone3" type="tel">
+        <input id="input-phone1" type="tel" onkeyup="this.value = numberFilter(this.value)">
+        <input id="input-phone2" type="tel" onkeyup="this.value = numberFilter(this.value)">
+        <input id="input-phone3" type="tel" onkeyup="this.value = numberFilter(this.value)">
     </div>
     <div class="text-box" id="text-box-address">
         <div class="text-title" id="title-address">배송 수령지 주소</div>

@@ -86,11 +86,11 @@ function onClick(name, target) {
             break;
         case "btn-back" :
             // 상품 목록으로 돌아가기
-            location.replace("productlist.html");
+            location.href = "productlist.html";
             break;
         case "btn-confirm" :
             // 주문자 정보 입력 및 결제
-            location.replace("order.html?basket=true&ordertype=" + ordertype);
+            location.href = "order.html?basket=true&ordertype=" + ordertype;
             break;
         case "btn-minus" :
             if (order_product_count[target] > 1) {

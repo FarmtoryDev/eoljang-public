@@ -148,7 +148,7 @@ function onClick(name, target) {
             $('.cd-popup').addClass('is-visible');
             break;
         case "btn-farmer":
-            location.replace("farmer.html?index=" + target);
+            location.href = "farmer.html?index=" + target;
             break;
         default:
             break;
