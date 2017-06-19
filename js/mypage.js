@@ -91,7 +91,7 @@ function onClickConfirm(orderId, productId) {
                     alert("수령완료 처리되었습니다.");
                 } else {
                     console.log("error");
-                    console.log(e);
+                    console.log(data);
                     alert("수령완료 처리 중 에러가 발생했습니다.");
                 }
             },
@@ -108,14 +108,12 @@ function makeOrder(orderType) {
     // 구매내역 동적 생성
     var order_table_product = document.getElementById("order-table-product");
     order_table_product.innerHTML = null;
-    var order_date = new Array;
     var order_shipping = new Array;
     var orderprice = new Array;
     var table_date_content = "";
     for (i = (orderData.length - 1); i >= 0; i--) {
         // 최신 주문이 가장 위로 오도록
         var productCount = 0;
-        order_date.push(orderData[i].pdate);
         var order_product_data_content = new Array;
         var order_sum_allprice_content = 0;
         var order_shipping_content = "배송비 없음";
@@ -139,16 +137,33 @@ function makeOrder(orderType) {
                 farmerName = "";
                 farmerNameEnd = "";
             }
-            switch (order_product_data_content.count.state) {
-                case 1:
+            switch (orderData[i].state) { // 주문 통합 상태 확인
+                case 1: // 주문접수
                     productStatus = "<div class='product-cell-status'><div class='product-status'>주문접수</div>" +
                         "<div class='btn-receive clickable' onclick='onClick(\"btn-cancel\"," + orderData[i].id + ")'>" +
                         "<div class='text-receive'>주문취소</div></div></div>";
                     break;
-                case 2:
-                    productStatus = "<div class='product-cell-status'><div class='product-status'>미수령</div>" +
-                        "<div class='btn-receive clickable' onclick='onClickConfirm(" + orderData[i].id + "," + k + ")'>" +
-                        "<div class='text-receive'>수령완료</div></div></div>";
+                case 2: // 접수완료, 수령대기
+                    switch (order_product_data_content.count.state) { // 제품 개별 상태 확인
+                        case -1: // 주문취소
+                            break;
+                        case 1: // 수령대기
+                            productStatus = "<div class='product-cell-status'><div class='product-status'>미수령</div>" +
+                                "<div class='btn-receive clickable' onclick='onClickConfirm(" + orderData[i].id + "," + (k + 1) + ")'>" +
+                                "<div class='text-receive'>수령완료</div></div></div>";
+                            break;
+                        case 10: // 수령확인
+                            productStatus = "<div class='product-cell-status'><div class='product-status'>수령완료</div></div>";
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case 10: // 수령완료
+                    productStatus = "<div class='product-cell-status'><div class='product-status'>수령완료</div></div>";
+                    break;
+                case -1: // 주문취소
+                    productStatus = "<div class='product-cell-status'><div class='product-status'>주문취소</div></div>";
                     break;
                 default:
                     break;
@@ -187,8 +202,9 @@ function makeOrder(orderType) {
 
         }
         */
+        // UTC를 한국시간으로 변경(http://momentjs.com/timezone/)
         var table_farm_result = "<div class='table-farm'>" +
-            "<div class='product-date'>" + orderData[i].pdate + "</div>" +
+            "<div class='product-date'>" + moment.tz(orderData[i].pdate, "Asia/Seoul").format("YYYY/MM/DD") + "</div>" +
             table_farm_content + "</div>";
         switch (orderType) {
             case 1:
@@ -217,8 +233,6 @@ function makeOrder(orderType) {
     }
     innerHtmlContent = "<div class='table-date'>" + table_date_content + "</div>";
     order_table_product.innerHTML = innerHtmlContent;
-    // UTC를 한국시간으로 변경
-    //http://momentjs.com/timezone/
 }
 
 function farmerGrouping(order_data) {

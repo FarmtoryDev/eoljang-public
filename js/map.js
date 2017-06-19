@@ -1,4 +1,3 @@
-var DeviceId = '10259273-4a1a-e95b-b29b-4ba0ba47a352';
 var farmerListResult = new Array;
 var MAX_FARMER_NUMBER = 30;
 var swipeAnchor = 0;
@@ -185,8 +184,14 @@ function farmerList(DeviceId) {
         cache: false,
         contentType: "application/json",
         success: function (data) {
-            farmerListResult.push(data.data);
-            addShop();
+            if (data.result) {
+                farmerListResult.push(data.data);
+                addShop();
+            } else {
+                console.log("error");
+                console.log(data);
+                alert("농부 목록을 불러오는 중에 에러가 발생하였습니다.");
+            }
         },
         error: function (e) {
             console.log("error");
@@ -239,8 +244,9 @@ function addShop() {
         } else {
             shop_div.style.top = shop_top + "%";
         }
-        shop_div.innerHTML += "<img class='shop-icon' src='./img/map/shop_icon.png'/>";
-        shop_div.innerHTML += "<div class='shop-num'>" + (i + 1) + "</div>";
+        shop_div.innerHTML += "<img class='shop-profile' src='" + farmer_data[farmer_num].info.profileimg + "'/>";
+        //shop_div.innerHTML += "<img class='shop-icon' src='" + farmer_data[farmer_num].info.profileimg + "'/>";
+        //shop_div.innerHTML += "<div class='shop-num'>" + (i + 1) + "</div>";
         shop_div.innerHTML += "<div class='shop-name'>" + farmer_data[farmer_num].info.pname + "</div>";
         document.getElementById("road-bg").appendChild(shop_div);
         if (farmer_num >= Object.keys(farmer_data).length) {
@@ -249,8 +255,8 @@ function addShop() {
             farmer_num++;
         }
     }
-    swipePage();
-    scrollPage();
+    //swipePage();
+    //scrollPage();
     swipeAnchor = 0;
     anchorArray.push(0); // 첫 anchor는 0
     for (i = 1; i <= anchor_num; i++) {
