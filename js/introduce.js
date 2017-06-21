@@ -10,6 +10,6 @@ function initMap() {
     });
 }
 
-$(document).ready(function(){
-    $("#nav-introduce").css("color", "#4fb9ab");
+$(window).load(function(){
+    $("#nav-introduce>a").css("color", "#4fb9ab");
 });

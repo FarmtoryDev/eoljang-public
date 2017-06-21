@@ -155,12 +155,12 @@ function productResize () {
     }
 }
 
-window.onload = function () {
+$(window).load(function () {
+    $("#nav-main>a").css("color", "#4fb9ab");
     farmerList(DeviceId);
-}
+});
 
 $(document).ready(function(){
-    $("#nav-main").css("color", "#4fb9ab");
     $(window).resize(productResize());
     //$(window).resize(modifySize())
 });

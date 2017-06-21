@@ -152,6 +152,7 @@
   text-align: left;
   color: #000000;
   display: inline-block;
+  padding: 0 10.73%;
 }
 
 .product-price {
@@ -164,6 +165,7 @@
   letter-spacing: -1px;
   text-align: right;
   color: #000000;
+  padding: 0 10.73%;
 }
 
 .btn-minus, .btn-plus {

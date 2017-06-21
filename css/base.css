@@ -345,7 +345,7 @@ hr.star-primary:after {
 }
 
 .nav-item a:hover {
-    color: #4fb9ab;
+    color: #4fb9ab !important;
 }
 
 .menu-vertical-line {
@@ -361,6 +361,11 @@ hr.star-primary:after {
     border: solid 1px #9b9b9b;
 }
 
+#nav-home {
+    margin: 0;
+    height: 48px;
+}
+
 #home-box {
     width: 48px;
     height: 48px;
@@ -370,11 +375,17 @@ hr.star-primary:after {
 #btn-home {
     width: 24px;
     height: 24px;
+    margin: 12px 0;
+}
+
+#nav-basket {
+    padding-left: 0;
 }
 
 #btn-basket-header {
     width: 20px;
     height: 25px;
+    margin: 0 12px;
 }
 
 #content-nav {
@@ -447,7 +458,7 @@ footer {
 #footer-btn-text2 {
     position: absolute;
     top: 0;
-    left: 237px;
+    left: 277px;
     font-family: NotoSansCJKkr;
     font-size: 14rem;
     font-weight: bold;

@@ -1,73 +1,46 @@
-@font-face{font-family:'NotoSansCJKkr'; src:url('../font/NotoSansKR-Regular.otf')}
-
-#fullcontainer {
-    margin: 72px auto;
+#completed-container {
+    width: 34%;
+    min-width: 500px;
+    margin: 70px auto;
     text-align: center;
-    max-width: 1200px;
 }
 
-#container-ordercomp {
-  text-align: center;
+#ic-completed {
+    width: 128px;
+    height: 128px;
+    margin: 43px auto 0 auto;
 }
 
-#completed-img {
-  margin-top: 32px;
-  width: 128px;
-  height: 128px;
-  object-fit: contain;
+#completed-text {
+    font-family: NotoSansCJKkr;
+    font-size: 24rem;
+    letter-spacing: -1.2px;
+    text-align: center;
+    color: #000000;
+    margin: 40px auto;
 }
 
-.completed-text {
-  margin-top: 40px;
-  font-family: 'NotoSansCJKkr';
-  font-size: 24px;
-  color: #000000;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: -1.2px;
-  text-align: center;
-  margin-bottom: 40px;
+#btn-container {
+    width: 100%;
 }
 
-#go-mainpage {
-  width: 240px;
-  height: 48px;
-  border: solid 1px #9b9b9b;
+#btn-main, #btn-mypage {
+    display: inline-block;
+    width: 240px;
+    height: 48px;
+    margin: 0 4px;
 }
 
-.main-text {
-  margin-top: 9px;
-  margin-bottom: 12px;
-  margin-left: 37px;
-  margin-right: 36px;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  color: #9b9b9b;
-  font-family: 'NotoSansCJKkr';
-}
 
-#go-mypage {
-  margin-left: 8px;
-  width: 240px;
-  height: 48px;
-  background-color: #9b9b9b;
-}
+@media screen and (max-device-width: 767px) {
+    #completed-container {
+        width: 100%;
+        min-width: unset;
+        margin: 70px auto;
+        text-align: center;
+    }
 
-.mypage-text {
-  margin-top: 9px;
-  margin-bottom: 12px;
-  margin-left: 25px;
-  margin-right: 30px;
- font-family: 'NotoSansCJKkr';
- font-size: 18px;
- font-weight: bold;
- font-style: normal;
- font-stretch: normal;
- line-height: normal;
- color: #ffffff;
+    #btn-main, #btn-mypage {
+        margin: 10px 4px;
+    }
 }

@@ -98,12 +98,12 @@ function productResize () {
     $(".product-basket").css("top", productWidth);
 }
 
-window.onload = function () {
+$(window).load(function () {
+    $("#nav-productlist>a").css("color", "#4fb9ab");
     farmerList(DeviceId);
-}
+});
 
 
 $(document).ready(function(){
-    $("#nav-productlist").css("color", "#4fb9ab");
     $(window).resize(productResize());
 });

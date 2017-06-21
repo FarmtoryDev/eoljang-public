@@ -1,3 +1,3 @@
-window.onload = function () {
-    $("#nav-event").css("color", "#4fb9ab");
-};
+$(window).load(function () {
+    $("#nav-event>a").css("color", "#4fb9ab");
+});

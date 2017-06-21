@@ -294,13 +294,13 @@ function setPopup(target) {
 
 }
 
-window.onload = function () {
+$(window).load(function () {
+    $("#nav-map>a").css("color", "#4fb9ab");
     farmerList(DeviceId);
     setShopContainer();
     popUp();
-}
+});
 
 $(document).ready(function(){
-    $("#nav-map").css("color", "#4fb9ab");
     $(window).resize(setShopContainer())
 });

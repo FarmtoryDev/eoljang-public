@@ -340,14 +340,14 @@ function makeOrder(isFirst) {
                     "</div><div class='product-amount'>" + order_product_amount[i] +
                     "</div></div></div>" +
                     "<div class='product-cell-price'><div class='product-price'>" + numberWithCommas(order_product_price[i]) +
-                    "</div></div>" +
+                    "원</div></div>" +
                     "<div class='product-cell-count'><img class='btn-minus clickable' src='img/basket/ic-minus.png' onclick='onClick(\"btn-minus\", " + (i) +
                     ")'><div class='product-count' id='product-count-" + i + "'>" + order_product_count[i] +
                     "</div><img class='btn-plus clickable' src='img/basket/ic-plus.png' onclick='onClick(\"btn-plus\", " + i +
                     ")'></div>" +
                     "<div class='product-cell-allprice'><div class='product-allprice-title'>주문금액</div>" +
                     "<div class='product-allprice' id='product-allprice-" + i + "'>" + numberWithCommas(order_product_allprice[i]) +
-                    "</div></div>";
+                    "원</div></div>";
                 productFirst = false;
             }
         }

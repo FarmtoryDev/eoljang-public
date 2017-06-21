@@ -460,10 +460,8 @@ function buy(name, phone, address){
             }).done(function(data) {
                 console.log("data이다",data);
                 if (data.result) {
-                    alert("결제가 완료되었습니다.\n(개발 중이므로 실제 결제가 진행되지 않습니다.)");
                     // 뒤로가기로 돌아갈 수 없도록 replace로 페이지를 대체
-                    location.replace("mypage.html");
-                    // 나중엔 ordercompleted.html로 리다이렉트 시킬 것
+                    location.replace("ordercompleted.html");
                 } else {
                     var msg = '결제에 실패하였습니다.';
                     msg += '에러내용 : ' + rsp.error_msg;
