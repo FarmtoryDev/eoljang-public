@@ -58,9 +58,9 @@
     </div>
     <div class="text-box" id="text-box-phone">
         <div class="text-title" id="title-phone">주문자 휴대전화</div>
-        <input id="input-phone1" type="tel">
-        <input id="input-phone2" type="tel">
-        <input id="input-phone3" type="tel">
+        <input id="input-phone1" type="tel" onkeyup="this.value = numberFilter(this.value)">
+        <input id="input-phone2" type="tel" onkeyup="this.value = numberFilter(this.value)">
+        <input id="input-phone3" type="tel" onkeyup="this.value = numberFilter(this.value)">
     </div>
     <div class="text-box" id="text-box-address">
         <div class="text-title" id="title-address">배송 수령지 주소</div>
@@ -100,10 +100,6 @@
 
 <div id="load-footer">
 </div>
-<!-- 헤더 및 푸터를 불러오는 js -->
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="js/base.js" type="text/javascript"></script>
-<script src="js/order.js" type="text/javascript"></script>
 <!-- kakao pay js -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
@@ -111,5 +107,10 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
 <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.2.js"></script>
 <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+<!-- 헤더 및 푸터를 불러오는 js -->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<script>getUserName();</script>
+<script src="js/order.js" type="text/javascript"></script>
 </body>
 </html>

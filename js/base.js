@@ -16,7 +16,7 @@ $(document).ready(function(){
     }
     DeviceId = sessionStorage.getItem('device_id');
     Accesstoken = sessionStorage.getItem('accesstoken');
-    getUserName();
+    //getUserName();
     // 1200px 이하의 화면에서 navigation bar 수평 스크롤 가능하게 하는 jquery
     $(".navbar").scrollLeft(300);
 });
@@ -258,6 +258,11 @@ function numberWithCommas(num) {
     // /정규표현식/g : 문자열 내 정규표현식으로 표현된 모든 패턴을 찾음
     // \B : 문자와 공백 사이가 아닌 값을 찾음
     // \d{3} : 숫자를 3번 반복한 패턴을 찾음
+}
+
+function numberFilter(target) {
+    // 숫자 이외의 문자를 필터링하는 함수
+    return target.replace(/[^0-9]/gi, "");
 }
 
 function scrollToAnchor(aid, relativeTop){

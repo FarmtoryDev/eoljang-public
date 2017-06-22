@@ -148,7 +148,7 @@ function onClick(name, target) {
             $('.cd-popup').addClass('is-visible');
             break;
         case "btn-farmer":
-            location.replace("farmer.html?index=" + target);
+            location.href = "farmer.html?index=" + target;
             break;
         default:
             break;
@@ -294,11 +294,12 @@ function setPopup(target) {
 
 }
 
-window.onload = function () {
+$(window).load(function () {
+    $("#nav-map>a").css("color", "#4fb9ab");
     farmerList(DeviceId);
     setShopContainer();
     popUp();
-}
+});
 
 $(document).ready(function(){
     $(window).resize(setShopContainer())

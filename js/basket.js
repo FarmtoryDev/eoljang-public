@@ -86,11 +86,11 @@ function onClick(name, target) {
             break;
         case "btn-back" :
             // 상품 목록으로 돌아가기
-            location.replace("productlist.html");
+            location.href = "productlist.html";
             break;
         case "btn-confirm" :
             // 주문자 정보 입력 및 결제
-            location.replace("order.html?basket=true&ordertype=" + ordertype);
+            location.href = "order.html?basket=true&ordertype=" + ordertype;
             break;
         case "btn-minus" :
             if (order_product_count[target] > 1) {
@@ -340,14 +340,14 @@ function makeOrder(isFirst) {
                     "</div><div class='product-amount'>" + order_product_amount[i] +
                     "</div></div></div>" +
                     "<div class='product-cell-price'><div class='product-price'>" + numberWithCommas(order_product_price[i]) +
-                    "</div></div>" +
+                    "원</div></div>" +
                     "<div class='product-cell-count'><img class='btn-minus clickable' src='img/basket/ic-minus.png' onclick='onClick(\"btn-minus\", " + (i) +
                     ")'><div class='product-count' id='product-count-" + i + "'>" + order_product_count[i] +
                     "</div><img class='btn-plus clickable' src='img/basket/ic-plus.png' onclick='onClick(\"btn-plus\", " + i +
                     ")'></div>" +
                     "<div class='product-cell-allprice'><div class='product-allprice-title'>주문금액</div>" +
                     "<div class='product-allprice' id='product-allprice-" + i + "'>" + numberWithCommas(order_product_allprice[i]) +
-                    "</div></div>";
+                    "원</div></div>";
                 productFirst = false;
             }
         }
@@ -404,6 +404,7 @@ function makeOrder(isFirst) {
 // </div>
 
 window.onload = function () {
+    $("#nav-basket").css("color", "#4fb9ab");
     if (sessionStorage.getItem('accesstoken') != undefined) {
         loadBasket(DeviceId, Accesstoken);
         allSelect();

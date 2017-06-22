@@ -308,6 +308,7 @@ function loadOrder(DeviceId, Accesstoken, orderType){
 }
 
 $(document).ready(function() {
+    $("#nav-mypage>a").css("color", "#4fb9ab");
     if (sessionStorage.getItem('accesstoken') != undefined) {
         loadOrder(DeviceId, Accesstoken, orderType);
     } else {

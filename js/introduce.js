@@ -9,3 +9,7 @@ function initMap() {
         map: map
     });
 }
+
+$(window).load(function(){
+    $("#nav-introduce>a").css("color", "#4fb9ab");
+});
