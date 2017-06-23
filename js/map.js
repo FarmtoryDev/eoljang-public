@@ -150,6 +150,9 @@ function onClick(name, target) {
         case "btn-farmer":
             location.href = "farmer.html?index=" + target;
             break;
+        case "btn-close":
+            $('.cd-popup').removeClass('is-visible');
+            break;
         default:
             break;
     }
@@ -176,7 +179,7 @@ function farmerList(DeviceId) {
     // 농부 목록 불러오기
     $.ajax({
         type: "GET",
-        url: "https://api.eoljang.com/farmer/list",
+        url: apiHost + "farmer/list",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id", DeviceId);
         },

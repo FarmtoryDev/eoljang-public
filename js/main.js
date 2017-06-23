@@ -2,6 +2,7 @@ var farmerListResult = new Array;
 var NUMBER_OF_FARMER = 10;
 var NUMBER_OF_PRODUCTS = 4;
 var carousel;
+var carousel_banner;
 
 function onClick(name, target) {
     switch (name) {
@@ -23,6 +24,16 @@ function onClick(name, target) {
             // location.replace()를 사용할 경우 히스토리에 남지 않으므로 구분해서 사용할 것(만료된 페이지 처리를 위해서는 replace 사용)
             location.href = "farmer.html?index=" + target;
             break;
+        case "btn-close":
+            switch (target) {
+                case "popup":
+                    sessionStorage.setItem('isSeenPopup0624', true);
+                    break;
+                default:
+                    break;
+            }
+            $('.cd-popup').removeClass('is-visible');
+            break;
         default:
             break;
     }
@@ -32,7 +43,7 @@ function farmerList(DeviceId) {
     // 농부 목록 불러오기
     $.ajax({
         type: "GET",
-        url: "https://api.eoljang.com/farmer/list",
+        url: apiHost + "farmer/list",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id", DeviceId);
         },
@@ -155,9 +166,35 @@ function productResize () {
     }
 }
 
+// from https://blog.trackduck.com/2015/06/10/15-impressive-pop-animation-effects-codepen/
+function popUp() {
+    //close popup
+    $('.cd-popup').on('click', function(event){
+        if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+            event.preventDefault();
+            $(this).removeClass('is-visible');
+            sessionStorage.setItem('isSeenPopup0624', true);
+        }
+    });
+    //close popup when clicking the esc keyboard button
+    $(document).keyup(function(event){
+        if(event.which=='27'){
+            $('.cd-popup').removeClass('is-visible');
+            sessionStorage.setItem('isSeenPopup0624', true);
+        }
+    });
+}
+
 $(window).load(function () {
+    carousel_banner = $("#scrolling-banner-section");
+    carousel_banner.itemslide({
+        parent_width: true
+    });
     $("#nav-main>a").css("color", "#4fb9ab");
     farmerList(DeviceId);
+    if (sessionStorage.getItem('accesstoken') != null && sessionStorage.getItem('isSeenPopup0624') == null) {
+        $('.cd-popup').addClass('is-visible');
+    }
 });
 
 $(document).ready(function(){

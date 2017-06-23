@@ -39,6 +39,10 @@ function onClick(name) {
             $('.cd-popup').addClass('is-visible');
             $("#term-content").load("terms2.html");
             break;
+        case "btn-close":
+            // 약관 닫기
+            $('.cd-popup').removeClass('is-visible');
+            break;
         case "btn-confirm" :
             // 카카오페이로 결제하기
             var input_name = document.getElementById("input-name").value;
@@ -51,14 +55,16 @@ function onClick(name) {
 
             var inputList = document.getElementsByTagName("input");
             var unCheckedNum = -1; // 입력되지 않은 inputList 번호를 반환
-            for (i = 0; i < inputList.length && unCheckedNum > -1; i++) {
+            for (i = 0; i < inputList.length; i++) {
                 if (i < 7) {
                     if(inputList[i].value == "") {
                         unCheckedNum = i;
+                        break;
                     }
                 } else {
                     if(!inputList[i].checked) {
                         unCheckedNum = i;
+                        break;
                     }
                 }
             }
@@ -132,7 +138,7 @@ function loadBasket(DeviceId, Accesstoken) {
     var basket_data = new Array;
     $.ajax({
         type: "POST",
-        url: "https://api.eoljang.com/basket/list",
+        url: apiHost + "basket/list",
         cache: false,
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id", DeviceId);
@@ -186,7 +192,7 @@ function productDetail(DeviceId, productId){
     // 상품 정보 가져오기
     $.ajax({
         type: "GET",
-        url: "https://api.eoljang.com/product/detail/" + productId,
+        url: apiHost + "product/detail/" + productId,
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
         },
@@ -430,7 +436,7 @@ function buy(name, phone, address){
             console.log("rsp.imp_uid",rsp.imp_uid);
             //[1] 서버단에서 결제정보 조회를 위해 jQuery ajax로 imp_uid 전달하기
             $.ajax({
-                url: "https://api.eoljang.com/order/create", //cross-domain error가 발생하지 않도록 주의해주세요
+                url: apiHost + "order/create", //cross-domain error가 발생하지 않도록 주의해주세요
                 type: 'POST',
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("X-Device-Id" , DeviceId );

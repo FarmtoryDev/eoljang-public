@@ -8,7 +8,7 @@ function startLoadFile(DeviceId){
 
     $.ajax({
         type: "POST",
-        url: "https://api.eoljang.com/insta/tagcontent",
+        url: apiHost + "insta/tagcontent",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
         },

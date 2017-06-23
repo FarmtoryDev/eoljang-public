@@ -34,7 +34,7 @@ function onClick(name, target) {
             if (doConfirm) {
                 $.ajax({
                     type: "POST",
-                    url: "https://api.eoljang.com/order/cancel",
+                    url: apiHost + "order/cancel",
                     cache:false,
                     data: "order_id=" + target,
                     beforeSend: function (xhr) {
@@ -74,7 +74,7 @@ function onClickConfirm(orderId, productId) {
     if (doConfirm) {
         $.ajax({
             type: "POST",
-            url: "https://api.eoljang.com/order/confirm",
+            url: apiHost + "order/confirm",
             cache:false,
             data: "order_id=" + orderId + "&product_id=" + productId,
             beforeSend: function (xhr) {
@@ -277,7 +277,7 @@ function loadOrder(DeviceId, Accesstoken, orderType){
     // 장바구니 업데이트하기
     $.ajax({
         type: "POST",
-        url: "https://api.eoljang.com/order/query",
+        url: apiHost + "order/query",
         cache:false,
         data: "type=" + orderType,
         beforeSend: function (xhr) {

@@ -18,7 +18,7 @@ function productList(DeviceId){
     // 상품 목록 불러오기
     $.ajax({
         type: "GET",
-        url: "https://api.eoljang.com/product/list",
+        url: apiHost + "product/list",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id" , DeviceId);
         },
@@ -41,7 +41,7 @@ function farmerList(DeviceId) {
     // 농부 목록 불러오기
     $.ajax({
         type: "GET",
-        url: "https://api.eoljang.com/farmer/list",
+        url: apiHost + "farmer/list",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id", DeviceId);
         },
