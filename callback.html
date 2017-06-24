@@ -25,6 +25,7 @@
     받은 accesstoken을 세션 스토리지에 저장 -->
 
 
+    <script src="js/base.js" type="text/javascript"></script>
     <script language=javascript>
         var QueryString = function () {
             var query_string = {};
@@ -68,7 +69,7 @@
             var result_data;
             $.ajax({
                 type: "POST",
-                url: "https://api.eoljang.com/member/auth",
+                url: apiHost + "member/auth",
                 data: JSON.stringify({"type": 1, "data": {"accesstoken": access_token}}),
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("X-Device-Id" , device_id);
@@ -114,7 +115,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "https://api.eoljang.com/member/extracttoken",
+                url: apiHost + "member/extracttoken",
                 cache: false,
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("X-Device-Id", DeviceId);

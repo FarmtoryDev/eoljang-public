@@ -43,7 +43,7 @@ function farmerList(DeviceId) {
     // 농부 목록 불러오기
     $.ajax({
         type: "GET",
-        url: "https://api.eoljang.com/farmer/list",
+        url: apiHost + "farmer/list",
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id", DeviceId);
         },
@@ -66,7 +66,7 @@ function farmerDetail(DeviceId, farmer_id) {
     // 농부 목록 불러오기
     $.ajax({
         type: "GET",
-        url: "https://api.eoljang.com/farmer/detail/" + farmer_id,
+        url: apiHost + "farmer/detail/" + farmer_id,
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id", DeviceId);
         },

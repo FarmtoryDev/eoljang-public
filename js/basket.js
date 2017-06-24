@@ -140,7 +140,7 @@ function loadBasket(DeviceId, Accesstoken) {
     orderprice = 0;
     $.ajax({
         type: "POST",
-        url: "https://api.eoljang.com/basket/list",
+        url: apiHost + "basket/list",
         cache: false,
         beforeSend: function (xhr) {
             xhr.setRequestHeader("X-Device-Id", DeviceId);
@@ -171,7 +171,7 @@ function basketUpdate(DeviceId, Accesstoken, productId, count){
     // 장바구니 업데이트하기(count만큼 장바구니 개수에 추가되는 것으로 변경됨)
     $.ajax({
         type: "POST",
-        url: "https://api.eoljang.com/basket/update",
+        url: apiHost + "basket/update",
         cache:false,
         data: JSON.stringify({ "product_id": productId, "count": count}),
         beforeSend: function (xhr) {

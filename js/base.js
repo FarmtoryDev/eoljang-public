@@ -1,3 +1,4 @@
+var apiHost = "https://api.eoljang.com/";
 var DeviceId;
 var Accesstoken;
 var user_id;
@@ -85,7 +86,9 @@ function getUserName() {
             document.getElementById("nav-login").innerHTML = "<a href='#'>" + user_nickname + "님</a>";
             setBasketBadge();
         }
+
     }
+
 }
 
 function setBasketBadge() {
@@ -95,7 +98,7 @@ function setBasketBadge() {
     if (DeviceId != null && Accesstoken != null) {
         $.ajax({
             type: "POST",
-            url: "https://api.eoljang.com/basket/list",
+            url: apiHost + "basket/list",
             cache: false,
             beforeSend: function (xhr) {
                 xhr.setRequestHeader("X-Device-Id", DeviceId);
