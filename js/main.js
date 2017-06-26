@@ -34,6 +34,18 @@ function onClick(name, target) {
             }
             $('.cd-popup').removeClass('is-visible');
             break;
+        case "event-banner1":
+            location.href = "introduce.html";
+            break;
+        case "event-banner2":
+            location.href = "https://www.facebook.com/DDPFarmersmarket/?fref=ts";
+            break;
+        case "event-banner3":
+            location.href = "farmer.html?index=4";
+            break;
+        case "event-banner4":
+            location.href = "farmer.html?index=2";
+            break;
         default:
             break;
     }
