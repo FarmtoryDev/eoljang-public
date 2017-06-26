@@ -306,6 +306,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   height: 33.33vw;
+  width: 100vw;
+  display: inline-block;
 }
 
 #event-bannner1 {

@@ -187,9 +187,7 @@ function popUp() {
 
 $(window).load(function () {
     carousel_banner = $("#scrolling-banner-section");
-    carousel_banner.itemslide({
-        parent_width: true
-    });
+    carousel_banner.itemslide();
     $("#nav-main>a").css("color", "#4fb9ab");
     farmerList(DeviceId);
     if (sessionStorage.getItem('accesstoken') != null && sessionStorage.getItem('isSeenPopup0624') == null) {
