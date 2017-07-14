@@ -405,9 +405,13 @@ hr.star-primary:after {
 
 
 @media screen and (max-device-width: 767px) {
-    header, #load-footer {
+    header {
         display: none;
     }
+    /*
+    header, #load-footer {
+        display: none;
+    }*/
 
     #content-nav {
         top: 0;
